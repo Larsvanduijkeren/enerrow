@@ -1,5 +1,6 @@
 <?php
-$id = get_field('id');
+$title = get_field('title');
+$text = get_field('text');
 ?>
 
 <section
@@ -9,6 +10,14 @@ $id = get_field('id');
     } ?>"
 >
     <div class="container">
-       <h2>marquee</h2>
+        <div class="content">
+            <?php if (empty($title) === false) : ?>
+                <h1 class="h2"><?php echo $title; ?></h1>
+            <?php endif; ?>
+
+            <?php if (empty($text) === false) {
+                echo $text;
+            } ?>
+        </div>
     </div>
 </section>

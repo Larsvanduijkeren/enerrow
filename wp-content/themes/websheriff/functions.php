@@ -54,6 +54,7 @@ function enqueue_theme_assets()
 
     // === SCRIPTS ===
     wp_enqueue_script('jquery'); // Ensure jQuery is available
+    wp_enqueue_script('jquery-marquee', $vendor_uri . 'jquery.marquee.js', ['jquery'], null, true);
 
     wp_enqueue_script('jquery-ui', $vendor_uri . 'jquery-ui.min.js', ['jquery'], null, true);
     wp_enqueue_script('aos', $vendor_uri . 'aos.min.js', [], null, true);

@@ -198,6 +198,24 @@
             "append": ""
         },
         {
+            "key": "field_690888566973e",
+            "label": "Route link",
+            "name": "route_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_69086cdcbbca8",
             "label": "Location",
             "name": "location",
@@ -280,5 +298,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762159876
+    "modified": 1762166883
 }

@@ -159,7 +159,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/pricing"
+                "value": "acf\/team-archive"
             }
         ]
     ],
@@ -173,5 +173,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762160021
+    "modified": 1762166208
 }

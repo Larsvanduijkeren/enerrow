@@ -20,6 +20,24 @@ input[type=submit] {
     border: 2px solid rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
 
+    &.calendar:before {
+        @extend .icon-font;
+        content: '\e900';
+        margin-right: 10px;
+    }
+
+    &.arrow:before {
+        @extend .icon-font;
+        content: '\e901';
+        margin-right: 10px;
+    }
+
+    &.forward-arrow:before {
+        @extend .icon-font;
+        content: '\e902';
+        margin-right: 10px;
+    }
+
     &.blue {
         background: $blue !important;
         border-color: $blue !important;
@@ -60,17 +78,6 @@ input[type=submit] {
 .buttons {
     &.center * {
         margin: 0 5px 10px 5px;
-    }
-
-    .btn:nth-child(2) {
-        background: $green !important;
-        border-color: $green !important;
-
-        &:hover,
-        &:focus {
-            background: $green !important;
-            border-color: $green !important;
-        }
     }
 
     * {

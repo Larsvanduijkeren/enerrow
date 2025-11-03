@@ -6,6 +6,7 @@ jQuery.noConflict();
         menu();
         accordion();
         headerController();
+        marquee();
 
         if ($(window).width() > 991) {
             lenis();
@@ -21,6 +22,15 @@ jQuery.noConflict();
             });
         }
     });
+
+    let marquee = () => {
+        $('.marquee-slider').marquee({
+            delayBeforeStart: 0,
+            duplicated: true,
+            startVisible: true,
+            duration: 20000,
+        });
+    };
 
     let headerController = function () {
         let scrollWrapper = $(window);
