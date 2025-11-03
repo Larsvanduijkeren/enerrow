@@ -1,0 +1,110 @@
+section.pricing {
+    .card {
+        position: relative;
+        z-index: 5;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            right: 10px;
+            height: 700px;
+            border-radius: $radius-mid;
+            background: $green;
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 600px;
+            text-align: center;
+            padding-top: 200px;
+            margin: 0 auto;
+            padding-bottom: 200px;
+
+            .buttons .btn:nth-child(2) {
+                background: transparent !important;
+                color: $blue !important;
+            }
+        }
+    }
+
+    .plans {
+        margin-top: -100px;
+        position: relative;
+        z-index: 10;
+
+        .control {
+            margin-left: auto;
+            display: block;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .plans-wrapper {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            > * {
+                width: 25%;
+                max-width: 25%;
+                flex-basis: 25%;
+            }
+
+            .plan {
+                border-left: 1px solid $green;
+                border-top: 1px solid $green;
+
+                &:first-child {
+                    .group {
+                        &:first-child {
+                            border-radius: $radius-mid 0 0 0;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 0 0 $radius-mid;
+                        }
+                    }
+                }
+
+                .group {
+                    padding: 20px;
+                    background: $white;
+                    border-right: 1px solid $green;
+                    border-bottom: 1px solid $green;
+                    text-align: center;
+
+                    &:first-child {
+                        padding: 40px;
+                    }
+
+                    .yearly-price {
+                        display: none !important;
+                    }
+
+                    .yearly-price,
+                    .monthly-price {
+                        font-size: 80px;
+                        font-weight: 400;
+                        font-family: $font-pixel;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        line-height: 1;
+                        margin-left: -20px;
+
+                        span {
+                            font-family: $font-body;
+                            font-size: 1rem;
+                            display: inline-block;
+                            margin-right: 10px;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

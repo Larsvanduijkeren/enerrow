@@ -1,0 +1,137 @@
+section.team-archive {
+    .card {
+        position: relative;
+        z-index: 5;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            right: 10px;
+            height: 700px;
+            border-radius: $radius-mid;
+            background: $green;
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 600px;
+            text-align: center;
+            padding-top: 200px;
+            margin: 0 auto;
+            padding-bottom: 200px;
+
+            .buttons .btn:nth-child(2) {
+                background: transparent !important;
+                color: $blue !important;
+            }
+        }
+    }
+
+    .masonry {
+        margin-top: -100px;
+
+        .grid-sizer,
+        .team-member {
+            width: calc(33.333% - 1rem);
+        }
+
+        .gutter-sizer {
+            width: 1rem;
+        }
+
+        .team-member {
+            margin: 0;
+            margin-bottom: 20px;
+            background: $white;
+            border: 1px solid rgba(0,0,0,0.1);
+            border-radius: $radius-mid;
+            padding: 10px 10px 30px 10px;
+
+            .image {
+                position: relative;
+                display: block;
+                border-radius: $radius-mid $radius-mid $radius-mid 0;
+                overflow: hidden;
+
+                &:before {
+                    content: '';
+                    padding-top: 75%;
+                    display: block;
+                }
+
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            h3 {
+                background: $white;
+                padding: 20px 20px 0 10px;
+                margin-top: -20px;
+                border-radius: 0 $radius-mid 0 0 ;
+                display: inline-block;
+            }
+
+            p {
+                margin-bottom: 0;
+                padding-left: 10px;
+            }
+
+            &:nth-child(3) {
+                margin-top: 20px;
+            }
+
+            &:nth-child(4) {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+// Breakpoints
+@media (max-width: 1024px) {
+    section.team-archive .masonry {
+        .grid-sizer,
+        .team-member {
+            width: calc(50% - .75rem);
+        }
+
+        .gutter-sizer {
+            width: .75rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    section.team-archive {
+        .masonry {
+            .grid-sizer,
+            .team-member {
+                width: 100%;
+            }
+
+            .gutter-sizer {
+                width: 0;
+            }
+        }
+
+        .team-member {
+            // Let Isotope place items; don’t override with absolute tweaks
+            margin: 0 0 20px 0; // vertical rhythm only (optional)
+            position: relative !important;
+            left: auto !important;
+            top: auto !important;
+            right: auto !important;
+            bottom: auto !important;
+            transform: none !important;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-.page-404 {
+section.not-found {
     .content {
         max-width: 600px;
         padding: 40px;
@@ -7,5 +7,10 @@
         background: $blue;
         border-radius: $radius-large;
         margin: 0 auto;
+
+        h1,
+        h2 {
+            color: $green;
+        }
     }
 }

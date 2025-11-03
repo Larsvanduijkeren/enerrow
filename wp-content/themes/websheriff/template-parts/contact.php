@@ -19,9 +19,9 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
-    <div class="container">
-        <div class="card">
-            <div class="content">
+    <div class="card">
+        <div class="container">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($title) === false) : ?>
                     <h1><?php echo $title; ?></h1>
                 <?php endif; ?>
@@ -34,47 +34,50 @@ $id = get_field('id');
                     <div class="buttons">
                         <?php foreach ($buttons as $button) : ?>
                             <?php if (empty($button['button']) === false) {
-                                echo sprintf('<a href="%s" target="%s" class="btn blue %s">%s</a>', $button['button']['url'], $button['button']['target'], $button['icon'], $button['button']['title']);
+                                echo sprintf('<a href="%s" target="%s" class="btn green %s">%s</a>', $button['button']['url'], $button['button']['target'], $button['icon'], $button['button']['title']);
                             } ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>
-        </div>
 
-        <div class="flex-wrapper">
-            <div class="content">
-                <?php if (empty($map_title) === false) : ?>
-                    <h2><?php echo $map_title; ?></h2>
-                <?php endif; ?>
+            <div class="flex-wrapper">
+                <div class="text-wrap" data-aos="fade-up">
+                    <?php if (empty($map_title) === false) : ?>
+                        <h2><?php echo $map_title; ?></h2>
+                    <?php endif; ?>
 
-                <h3 class="h4">Contact</h3>
-                <?php if (empty($phone_number) === false) : ?>
-                    <a href="tel:<?php echo $phone_number; ?>" class="phone">
-                        <?php echo $phone_number; ?>
-                    </a>
-                <?php endif; ?>
+                    <div class="group">
+                        <h3 class="h4">Contact</h3>
+                        <?php if (empty($phone_number) === false) : ?>
+                            <a href="tel:<?php echo $phone_number; ?>" class="phone">
+                                <?php echo $phone_number; ?>
+                            </a>
+                        <?php endif; ?>
 
-                <?php if (empty($email_address) === false) : ?>
-                    <a href="mailto:<?php echo $email_address; ?>" class="email">
-                        <?php echo $email_address; ?>
-                    </a>
-                <?php endif; ?>
+                        <?php if (empty($email_address) === false) : ?>
+                            <a href="mailto:<?php echo $email_address; ?>" class="email">
+                                <?php echo $email_address; ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
 
-                <?php if (empty($location) === false) : ?>
-                    <h3 class="h4">Location</h3>
-                    <?php echo $location; ?>
-                <?php endif; ?>
+                    <div class="group">
+                        <?php if (empty($location) === false) : ?>
+                            <h3 class="h4">Location</h3>
+                            <?php echo $location; ?>
+                        <?php endif; ?>
+                    </div>
 
-                <?php if(empty($route_link) === false) : ?>
-                    <a href="<?php echo $route_link; ?>" class="route blue btn" target="_blank">
-                        Route to the studio
-                    </a>
-                <?php endif; ?>
-            </div>
+                    <?php if (empty($route_link) === false) : ?>
+                        <a href="<?php echo $route_link; ?>" class="location blue btn" target="_blank">
+                            Route to the studio
+                        </a>
+                    <?php endif; ?>
+                </div>
 
-            <div class="map">
-                <h3>Map</h3>
+                <div class="map" data-aos="fade-up">
+                </div>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@ $id = get_field('id');
 >
     <div class="container">
         <?php if (empty($texts) === false) : ?>
-            <div class="marquee-slider">
+            <div class="marquee-slider" data-aos="fade-up">
                 <?php foreach ($texts as $text) : ?>
                     <div class="text h1">
                         <?php if(empty($text['text']) === false) {

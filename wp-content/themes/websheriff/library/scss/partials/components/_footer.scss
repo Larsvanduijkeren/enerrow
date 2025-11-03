@@ -4,10 +4,30 @@ footer.footer {
     }
 
     .card {
+        margin: 10px;
         background: $blue;
         color: $white;
         border-radius: $radius-mid;
-        padding: 80px 80px 40px 80px;
+
+        ul,
+        ol {
+            margin: 0 0 $gutter-small 0 !important;
+            padding: 0;
+
+            li {
+                margin: 0 0 0 20px;
+                padding: 0;
+            }
+        }
+
+        ol li {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 10;
+            }
+        }
+
 
         a {
             color: $white;

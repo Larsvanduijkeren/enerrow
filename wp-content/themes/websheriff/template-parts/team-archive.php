@@ -26,8 +26,8 @@ $team_members = $query->posts;
         echo $id;
     } ?>"
 >
-    <div class="container">
-        <div class="card">
+    <div class="card">
+        <div class="container">
             <div class="content">
                 <?php if (empty($title) === false) : ?>
                     <h1><?php echo $title; ?></h1>
@@ -47,30 +47,33 @@ $team_members = $query->posts;
                     </div>
                 <?php endif; ?>
             </div>
+
+            <?php if (empty($team_members) === false) : ?>
+                <div class="masonry">
+                    <div class="grid-sizer"></div>
+                    <div class="gutter-sizer"></div>
+
+                    <?php foreach ($team_members as $team_member) :
+                        $team_image = get_field('image', $team_member);;
+                        $team_bio = get_field('biography', $team_member);;
+                        ?>
+                        <div class="team-member">
+                            <?php if (empty($team_image) === false) : ?>
+                                <span class="image">
+                                    <img src="<?php echo $team_image['sizes']['large']; ?>"
+                                         alt="<?php echo $team_image['alt']; ?>">
+                                </span>
+                            <?php endif; ?>
+
+                            <h3><?php echo get_the_title($team_member); ?></h3>
+
+                            <?php if (empty($team_bio) === false) : ?>
+                                <p><?php echo $team_bio; ?></p>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
-
-        <?php if (empty($team_members) === false) : ?>
-            <div class="flex-wrapper">
-                <?php foreach ($team_members as $team_member) :
-                    $team_image = get_field('image', $team_member);;
-                    $team_bio = get_field('biography', $team_member);;
-                    ?>
-                    <div class="team-member">
-                        <?php if (empty($team_image) === false) : ?>
-                            <span class="image">
-                                <img src="<?php echo $team_image['sizes']['large']; ?>"
-                                     alt="<?php echo $team_image['alt']; ?>">
-                            </span>
-                        <?php endif; ?>
-
-                        <h3><?php echo get_the_title($team_member); ?></h3>
-
-                        <?php if (empty($team_bio) === false) : ?>
-                            <p><?php echo $team_bio; ?></p>
-                        <?php endif; ?>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endif; ?>
     </div>
 </section>

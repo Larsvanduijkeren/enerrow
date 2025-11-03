@@ -9,10 +9,10 @@ if ($custom_404) {
         <div class="container">
             <div class="content">
                 <h1>404</h1>
-                <p>Deze pagina kon niet worden gevonden, omdat hij niet (meer) bestaat. Via de onderstaande knop brengen we u naar de homepage.</p>
+                <p>This page could not be found because it doesn't exist.</p>
 
                 <a href="/" class="btn">
-                    Terug naar home
+                    Return to homepage
                 </a>
             </div>
         </div>

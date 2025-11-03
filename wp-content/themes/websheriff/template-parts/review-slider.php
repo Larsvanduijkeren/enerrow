@@ -27,9 +27,9 @@ $reviews = $query->posts;
 >
     <div class="container">
         <div class="flex-wrapper">
-            <div class="content">
+            <div class="content" >
                 <?php if (empty($rating_score) === false) : ?>
-                    <div class="card blue">
+                    <div class="card blue" data-aos="fade-up"
                         <h4>Out of all ratings</h4>
 
                         <div class="score"><?php echo $rating_score; ?></div>
@@ -37,8 +37,8 @@ $reviews = $query->posts;
                 <?php endif; ?>
 
                 <?php if (empty($title) === false) : ?>
-                    <div class="card green">
-                        <?php echo $title; ?>
+                    <div class="card green" data-aos="fade-up">
+                        <h4><?php echo $title; ?></h4>
 
                         <?php if (empty($text) === false) {
                             echo $text;
@@ -47,7 +47,7 @@ $reviews = $query->posts;
                 <?php endif; ?>
             </div>
 
-            <div class="reviews">
+            <div class="reviews" data-aos="fade-up">
                 <?php if (empty($reviews) === false) : ?>
                     <div class="slider">
                         <?php foreach ($reviews as $review) :
@@ -58,7 +58,7 @@ $reviews = $query->posts;
                             ?>
                             <div class="review">
                                 <?php if (empty($review_text) === false) : ?>
-                                    <p><?php echo $review_text; ?></p>
+                                    <p>"<?php echo $review_text; ?>"</p>
                                 <?php endif; ?>
 
                                 <?php if (empty($review_author) === false) : ?>

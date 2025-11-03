@@ -13,29 +13,25 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
-    <div class="container">
-        <div class="card">
-            <div class="flex-wrapper">
-                <div class="content">
-                    <?php if (empty($title) === false) : ?>
-                        <h2><?php echo $title; ?></h2>
-                    <?php endif; ?>
-
-                    <?php if (empty($text) === false) {
-                        echo $text;
-                    } ?>
-
-                    <?php if (empty($button) === false) {
-                        echo sprintf('<a href="%s" target="%s" class="btn forward-arrow blue">%s</a>', $button['url'], $button['target'], $button['title']);
-                    } ?>
-                </div>
-
-                <?php if (empty($device_image) === false) : ?>
-                    <span class="image">
-                        <img src="<?php echo $device_image['sizes']['large']; ?>" alt="<?php echo $device_image['alt']; ?>">
-                    </span>
+    <div class="card" data-aos="fade-up">
+        <div class="container">
+            <div class="content" >
+                <?php if (empty($title) === false) : ?>
+                    <h2><?php echo $title; ?></h2>
                 <?php endif; ?>
+
+                <?php if (empty($text) === false) {
+                    echo $text;
+                } ?>
+
+                <?php if (empty($button) === false) {
+                    echo sprintf('<a href="%s" target="%s" class="btn forward-arrow blue">%s</a>', $button['url'], $button['target'], $button['title']);
+                } ?>
             </div>
         </div>
+
+        <?php if (empty($device_image) === false) : ?>
+            <img src="<?php echo $device_image['sizes']['large']; ?>" alt="<?php echo $device_image['alt']; ?>">
+        <?php endif; ?>
     </div>
 </section>

@@ -19,8 +19,8 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
-    <div class="container">
-        <div class="card">
+    <div class="card" data-aos="fade-up">
+        <div class="container">
             <div class="flex-wrapper">
                 <div class="content">
                     <?php if (empty($title) === false) : ?>
@@ -31,31 +31,35 @@ $id = get_field('id');
                         echo $text;
                     } ?>
 
-                    <?php if (empty($buttons) === false) : ?>
-                        <div class="buttons">
-                            <?php foreach ($buttons as $button) : ?>
-                                <?php if (empty($button['button']) === false) {
-                                    echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $button['icon'], $button['button']['title']);
-                                } ?>
-                            <?php endforeach; ?>
-                        </div>
-                    <?php endif; ?>
+                    <div class="meta-wrapper">
+                        <?php if (empty($buttons) === false) : ?>
+                            <div class="buttons">
+                                <?php foreach ($buttons as $button) : ?>
+                                    <?php if (empty($button['button']) === false) {
+                                        echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $button['icon'], $button['button']['title']);
+                                    } ?>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
 
-                    <?php if($image_size === 'large') : ?>
-                        <div class="social">
-                            <?php if (empty($tiktok) === false) : ?>
-                                <a href="<?php echo $tiktok; ?>" aria-label="tiktok social url" class="tiktok"></a>
-                            <?php endif; ?>
+                        <?php if ($image_size === 'large') : ?>
+                            <div class="social">
+                                <?php if (empty($tiktok) === false) : ?>
+                                    <a href="<?php echo $tiktok; ?>" aria-label="tiktok social url" class="tiktok"></a>
+                                <?php endif; ?>
 
-                            <?php if (empty($instagram) === false) : ?>
-                                <a href="<?php echo $instagram; ?>" aria-label="instagram social url" class="instagram"></a>
-                            <?php endif; ?>
+                                <?php if (empty($instagram) === false) : ?>
+                                    <a href="<?php echo $instagram; ?>" aria-label="instagram social url"
+                                       class="instagram"></a>
+                                <?php endif; ?>
 
-                            <?php if (empty($linkedin) === false) : ?>
-                                <a href="<?php echo $linkedin; ?>" aria-label="linkedin social url" class="linkedin"></a>
-                            <?php endif; ?>
-                        </div>
-                    <?php endif; ?>
+                                <?php if (empty($linkedin) === false) : ?>
+                                    <a href="<?php echo $linkedin; ?>" aria-label="linkedin social url"
+                                       class="linkedin"></a>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
                 </div>
 
                 <?php if (empty($image) === false) : ?>

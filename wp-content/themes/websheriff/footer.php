@@ -14,8 +14,8 @@ $linkedin = get_field('linkedin', 'option');
 </main>
 
 <footer class='footer'>
-    <div class='container wide'>
-        <div class="card">
+    <div class="card">
+        <div class='container'>
             <div class="flex-wrapper">
                 <div class="col">
                     <?php if (empty($footer_title_1) === false) : ?>
@@ -27,7 +27,7 @@ $linkedin = get_field('linkedin', 'option');
                     } ?>
 
                     <?php if (empty($footer_button) === false) {
-                        echo sprintf('<a href="%s" target="%s" class="btn green">%s</a>', $footer_button['url'], $footer_button['target'], $footer_button['title']);
+                        echo sprintf('<a href="%s" target="%s" class="btn green forward-arrow">%s</a>', $footer_button['url'], $footer_button['target'], $footer_button['title']);
                     } ?>
                 </div>
 

@@ -1,4 +1,23 @@
 section {
+    ul,
+    ol {
+        margin: 0 0 $gutter-small 0 !important;
+        padding: 0;
+
+        li {
+            margin: 0 0 0 20px;
+            padding: 0;
+        }
+    }
+
+    ol li {
+        margin-bottom: 5px;
+
+        &:last-child {
+            margin-bottom: 10;
+        }
+    }
+
     ul li {
         display: flex;
         align-items: flex-start;
@@ -22,10 +41,10 @@ section {
     }
 }
 
-section {
+section:not(.hero):not(.cta-device) {
     overflow: hidden;
 
-    + section .container {
+    + section:not(.cta-device) .container {
         padding-top: 0 !important;
     }
 }

@@ -97,7 +97,18 @@
 }
 
 .page-content {
-    padding-top: 130px;
+    padding-top: 80px;
+}
+
+main section:first-child {
+    &.hero,
+    &.contact,
+    &.pricing,
+    &.team-archive {
+        .container {
+            padding-top: 0 !important;
+        }
+    }
 }
 
 .social a {
@@ -186,7 +197,7 @@ button.lity-close:after {
 
 
 .slick-dotted {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
     margin: 0 !important;
 }
 

@@ -21,7 +21,7 @@ $id = get_field('id');
                     ?>
                     <div class="workout">
                         <div class="flex-wrapper">
-                            <div class="content">
+                            <div class="content" data-aos="fade-up">
                                 <h2><?php echo get_the_title($workout); ?></h2>
                                 <?php if (empty($workout_description) === false) {
                                     echo $workout_description;
@@ -32,7 +32,7 @@ $id = get_field('id');
                                 } ?>
                             </div>
 
-                            <div class="info">
+                            <div class="info" data-aos="fade-up">
                                 <?php if (empty($workout_stats) === false) : ?>
                                     <div class="stats">
                                         <?php foreach ($workout_stats as $stat) : ?>

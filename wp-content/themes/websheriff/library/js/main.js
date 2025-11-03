@@ -7,6 +7,7 @@ jQuery.noConflict();
         accordion();
         headerController();
         marquee();
+        reviewSlider();
 
         if ($(window).width() > 991) {
             lenis();
@@ -22,6 +23,20 @@ jQuery.noConflict();
             });
         }
     });
+
+    let reviewSlider = () => {
+        let slider = $(".review-slider .slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                autoplay: true,
+                dots: true,
+                arrows: false,
+                variableWidth: true,
+                autoplaySpeed: 4000,
+            });
+        }
+    }
 
     let marquee = () => {
         $('.marquee-slider').marquee({
@@ -106,5 +121,47 @@ jQuery.noConflict();
             }, 500);
         });
     };
+
+    let casesIso;
+
+    const casesMasonry = () => {
+        const $grid = $('.team-archive .masonry');
+        if (!$grid.length) return;
+
+        // Init Isotope after images known
+        $grid.imagesLoaded(() => {
+            casesIso = $grid.isotope({
+                itemSelector: '.team-member',
+                layoutMode: 'masonry',
+                percentPosition: true,
+                masonry: {
+                    columnWidth: '.grid-sizer',
+                    gutter: '.gutter-sizer'
+                }
+            });
+
+            // As images progressively load (slow networks), keep tightening layout
+            $grid.imagesLoaded().progress(() => casesIso.isotope('layout'));
+        });
+
+        // Debounced relayout on resize/orientation
+        const debounce = (fn, ms = 150) => {
+            let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn.apply(null, a), ms); };
+        };
+        const relayout = debounce(() => { if (casesIso) casesIso.isotope('layout'); }, 150);
+
+        $(window).on('resize orientationchange', relayout);
+
+        // Catch container width changes (tabs/accordions)
+        if (window.ResizeObserver) {
+            const ro = new ResizeObserver(() => relayout());
+            $grid.each((_, el) => ro.observe(el));
+        }
+
+        // Fonts can change metrics after load
+        if (document.fonts?.ready) document.fonts.ready.then(() => relayout());
+    };
+
+    jQuery(casesMasonry);
 })(jQuery);
 

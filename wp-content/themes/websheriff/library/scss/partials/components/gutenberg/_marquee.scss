@@ -1,26 +1,30 @@
 section.marquee {
     overflow: hidden;
 
+    .container {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
     &.green .js-marquee .text {
         color: $green;
     }
 
-    .container {
-        padding-bottom: 80px;
+    .marquee-slider {
+        height: 120px;
     }
 
-    .marquee-slider {
-        height: 80px;
+    .text {
+        margin-bottom: 0;
+        margin-right: 20px;
+        font-size: 120px;
+        font-family: $font-pixel;
+        font-weight: 400;
     }
 
     .js-marquee {
         display: flex;
         margin-right: 0 !important;
-
-        .text {
-            margin-bottom: 0;
-            margin-right: 20px;
-        }
     }
 }
 

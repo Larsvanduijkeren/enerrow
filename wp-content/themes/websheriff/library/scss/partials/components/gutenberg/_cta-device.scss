@@ -1,0 +1,28 @@
+section.cta-device {
+    .card {
+        margin: 0 10px;
+        background: $green;
+        border-radius: $radius-mid;
+        position: relative;
+    }
+
+    .content {
+        width: 50%;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 50%;
+        max-height: calc(100% - 240px);
+        object-fit: contain;
+        object-position: right;
+    }
+}

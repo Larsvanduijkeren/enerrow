@@ -31,20 +31,6 @@ a {
     color: $text;
 }
 
-ol {
-    margin-bottom: $gutter-small;
-}
-
-ul,
-ol {
-    margin: 0 0 $gutter-small 0;
-    padding: 0;
-
-    li {
-        margin: 0 0 0 20px;
-        padding: 0;
-    }
-}
 
 strong,
 b {
