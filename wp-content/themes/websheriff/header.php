@@ -50,7 +50,7 @@ $buttons = get_field('buttons', 'option');
 
 <header class='header'>
     <div class='container'>
-        <div class='top-wrapper'>
+        <div class='flex-wrapper'>
             <a href='/' class='logo' aria-label="Logo Enerrow">
                 <?php if (empty($logo) === false) : ?>
                     <img src='<?php echo $logo['sizes']['large']; ?>' alt='<?php echo $logo['alt']; ?>'>
@@ -61,11 +61,17 @@ $buttons = get_field('buttons', 'option');
 
             <div class="right">
                 <?php if (empty($buttons) === false) : ?>
-                    <div class="buttons">
-                        <?php foreach ($buttons as $button) : ?>
+                    <div class="header-buttons">
+                        <?php foreach ($buttons as $key => $button) :
+                            $class = '';
+
+                            if ($key === 1) {
+                                $class = 'blue';
+                            }
+                            ?>
                             <?php if (empty($button['button']) === false) {
-                                echo sprintf('<a href="%s" target="%s" class="btn">%s</a>', $button['button']['url'], $button['button']['target'], $button['button']['title']);
-                            } ?>
+                            echo sprintf('<a href="%s" target="%s" class="btn %s">%s</a>', $button['button']['url'], $button['button']['target'], $class, $button['button']['title']);
+                        } ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>

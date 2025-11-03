@@ -14,7 +14,7 @@ $linkedin = get_field('linkedin', 'option');
 </main>
 
 <footer class='footer'>
-    <div class='container'>
+    <div class='container wide'>
         <div class="card">
             <div class="flex-wrapper">
                 <div class="col">

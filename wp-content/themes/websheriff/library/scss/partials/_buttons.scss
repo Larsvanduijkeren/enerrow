@@ -4,59 +4,31 @@ input[type=submit] {
     appearance: none;
     -webkit-appearance: none;
     display: inline-flex;
-    background-color: $green !important;
-    color: $white !important;
-    font-weight: 500 !important;
+    background-color: $white !important;
+    color: $black !important;
+    font-weight: 400 !important;
     font-size: 1rem;
     padding: 10px 20px !important;
     font-family: $font-body;
-    line-height: 1.6;
+    line-height: 1.5;
     border-radius: 100px;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     outline: none;
     box-shadow: none;
-    border: 1px solid $green;
+    border: 2px solid rgba(0,0,0,0.1);
     transition: all 0.3s ease-in-out;
 
-    &:hover,
-    &:focus {
-        background: $light-blue !important;
-        border-color: $light-blue !important;
-    }
-
     &.blue {
-        background: $light-blue !important;
-        border-color: $light-blue !important;
-
-        &:hover,
-        &:focus {
-            background: $green !important;
-            border-color: $green !important;
-        }
+        background: $blue !important;
+        border-color: $blue !important;
+        color: $white !important;
     }
 
-    &.white {
-        background: $white !important;
-        color: $text !important;
-        border-color: $white !important;
-
-        &:hover,
-        &:focus {
-            background: $light-blue !important;
-            border-color: $light-blue !important;
-            color: $white !important;
-        }
-    }
-
-    &.small {
-        padding: 5px 15px !important;
-    }
-
-    &.extra-small {
-        padding: 3px 10px !important;
-        font-size: .8rem;
+    &.green {
+        background: $green !important;
+        border-color: $green !important;
     }
 }
 
@@ -91,8 +63,8 @@ input[type=submit] {
     }
 
     .btn:nth-child(2) {
-        background: $light-blue !important;
-        border-color: $light-blue !important;
+        background: $green !important;
+        border-color: $green !important;
 
         &:hover,
         &:focus {

@@ -22,38 +22,10 @@ section {
     }
 }
 
-section:not(.grey):not(.blue) {
+section {
     overflow: hidden;
 
-    + section:not(.grey):not(.blue) .container {
-        padding-top: 0 !important;
-    }
-}
-
-
-section.grey {
-    overflow: hidden;
-    background: $light-grey;
-
-    + section.grey .container {
-        padding-top: 0 !important;
-    }
-}
-
-section.blue {
-    overflow: hidden;
-    background: $blue;
-    color: $white;
-
-    a {
-        color: $white;
-    }
-
-    p {
-        color: #B6BDC4;
-    }
-
-    + section.blue .container {
+    + section .container {
         padding-top: 0 !important;
     }
 }

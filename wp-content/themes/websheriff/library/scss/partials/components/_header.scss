@@ -45,7 +45,7 @@ header.header {
     top: 0;
     width: 100%;
     background: $white;
-    height: 130px;
+    height: 80px;
     z-index: 150;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
     overflow: hidden;
@@ -55,7 +55,7 @@ header.header {
         padding-bottom: 0 !important;
     }
 
-    .top-wrapper {
+    .flex-wrapper {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -63,7 +63,7 @@ header.header {
 
         .logo {
             display: block;
-            height: 65px;
+            height: 35px;
             margin-right: 40px;
             font-size: 0;
 
@@ -74,26 +74,11 @@ header.header {
         }
 
         .right {
-            width: 300px;
-            text-align: right;
             margin-left: auto;
-
-            .btn {
-                position: relative;
-
-                &:before {
-                    @extend .icon-font;
-                    content: '\e913';
-                    color: $text;
-                    position: absolute;
-                    right: calc(100% + 20px);
-                    top: 5px;
-                }
-            }
         }
 
         .btn {
-            margin-left: 20px;
+            margin-left: 10px;
         }
 
         > div {
@@ -121,9 +106,9 @@ header.header {
                     a {
                         display: block;
                         z-index: 5;
-                        font-weight: 500;
+                        font-weight: 400;
                         font-size: 1rem;
-                        color: $text;
+                        color: $black;
                         position: relative;
                         font-family: $font-body;
                         vertical-align: middle;
@@ -135,7 +120,7 @@ header.header {
                             left: 50%;
                             width: 100%;
                             height: 2px;
-                            background: $light-blue;
+                            background: $green;
                             transform: translate(-50%, -50%);
                             bottom: 0;
                             opacity: 0;
@@ -245,7 +230,7 @@ header.header {
 
                                 &:hover,
                                 &:focus {
-                                    color: $light-blue;
+                                    color: $green;
                                 }
 
                                 .label {
@@ -299,78 +284,6 @@ header.header {
                         }
                     }
                 }
-            }
-        }
-    }
-
-    .bottom-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        height: 50px;
-        position: relative;
-        z-index: 5;
-
-        &:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 0;
-            width: 150vw;
-            height: 100%;
-            transform: translateX(-50%);
-            z-index: -1;
-            background: $grey;
-        }
-
-        .usps {
-            flex-grow: 1;
-            flex-shrink: 1;
-            width: 60%;
-            margin-right: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-
-            .usp {
-                margin-right: 30px;
-                display: flex;
-                align-items: center;
-                justify-content: flex-start;
-                font-size: .9rem;
-                font-weight: 500;
-
-                &:before {
-                    @extend .icon-font;
-                    content: '\e915';
-                    margin-right: 10px;
-                    font-size: 1.2rem;
-                    color: $green;
-                }
-            }
-        }
-
-        .right {
-            flex-grow: 0;
-            flex-shrink: 0;
-            width: 300px;
-            text-align: right;
-            padding-left: 100px;
-            position: relative;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-
-            img {
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                width: 100px;
-            }
-
-            .lang {
-                margin-left: 10px;
             }
         }
     }

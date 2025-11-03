@@ -57,7 +57,7 @@
             @extend .icon-font;
             content: '\e909';
             margin-right: 5px;
-            color: $light-blue;
+            color: $green;
         }
 
         &.phone:before {
@@ -107,10 +107,10 @@
                     transition: color 0.3s ease-in-out;
 
                     &.open {
-                        color: $light-blue;
+                        color: $green;
 
                         &:after {
-                            color: $light-blue;
+                            color: $green;
                             transform: translateY(-30%) rotate(180deg);
 
                         }
