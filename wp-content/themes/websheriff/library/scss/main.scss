@@ -1,0 +1,34 @@
+// Global variables
+@import "modules/variables.scss";
+
+// Lib
+@import "lib/slick";
+@import "lib/slick-theme";
+@import "lib/aos";
+@import "lib/lity";
+
+// Reset and general styling
+@import "partials/base.scss";
+@import "partials/tools.scss";
+@import "partials/typography.scss";
+@import "partials/inputs.scss";
+@import "partials/buttons.scss";
+@import "partials/styling.scss";
+
+// Component specific styling
+@import "partials/components/header";
+@import "partials/components/not-found";
+@import "partials/components/footer";
+@import "partials/components/mobile-nav";
+
+// Gutenberg
+@import "partials/components/gutenberg/contact";
+@import "partials/components/gutenberg/cta-deal";
+@import "partials/components/gutenberg/cta-device";
+@import "partials/components/gutenberg/hero";
+@import "partials/components/gutenberg/marquee";
+@import "partials/components/gutenberg/pricing";
+@import "partials/components/gutenberg/review-slider";
+@import "partials/components/gutenberg/team-archive";
+@import "partials/components/gutenberg/text-image";
+@import "partials/components/gutenberg/workout-slider";
