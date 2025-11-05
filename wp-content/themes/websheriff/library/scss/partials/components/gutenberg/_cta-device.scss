@@ -13,6 +13,10 @@ section.cta-device {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+
+        .btn {
+            color: $green !important;
+        }
     }
 
     img {

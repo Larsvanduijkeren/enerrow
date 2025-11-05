@@ -1,6 +1,6 @@
 footer.footer {
     .container {
-        padding-bottom: 10px !important;
+        padding-bottom: 40px !important;
     }
 
     .card {
@@ -8,6 +8,12 @@ footer.footer {
         background: $blue;
         color: $white;
         border-radius: $radius-mid;
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: $green;
+        }
 
         ul,
         ol {
@@ -50,6 +56,17 @@ footer.footer {
                     font-size: .85rem;
                 }
 
+                .btn {
+                    color: $blue !important;
+
+                    &:hover,
+                    &:focus {
+                        background: $black !important;
+                        color: $white !important;
+                        border-color: $black !important;
+                    }
+                }
+
                 &:first-child,
                 &:last-child {
                     width: calc(30% - 40px);
@@ -71,10 +88,77 @@ footer.footer {
 
                         a {
                             font-weight: 400;
+                            transition: color 0.3s ease-in-out;
+
+                            &:hover,
+                            &:focus {
+                                color: $green !important;
+                            }
                         }
 
                         &:last-child {
                             margin-bottom: 0;
+                        }
+                    }
+                }
+
+                .wpforms-container {
+                    margin: 0 0 20px 0;
+
+                    form {
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: flex-start;
+
+                        input {
+                            height: 50px;
+                            background: transparent;
+                            border: 1px solid white;
+                            border-radius: 100px 0 0 100px;
+                            padding-right: 40px;
+                            color: $white !important;
+                            font-size: .9rem;
+
+                            &::placeholder {
+                                color: white !important;
+                                opacity:.75;
+                            }
+                        }
+
+                        .wpforms-submit-container {
+                            margin: 0;
+                        }
+
+                        button {
+                            height: 50px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: .9rem;
+                            margin: 0 0 0 -25px;
+                            border-radius: 100px;
+                            background: $green !important;
+                            color: $blue !important;
+                            transition: all 0.3s ease-in-out;
+
+                            &:before {
+                                @extend .icon-font;
+                                content: '\e906';
+                                margin-right: 10px;
+                                font-size: .8rem;
+                                transition: all 0.3s ease-in-out;
+                            }
+
+                            &:hover,
+                            &:focus {
+                                background: $black !important;
+                                color: $white !important;
+                                border-color: $black !important;
+
+                                &:before {
+                                    color: $white !important;
+                                }
+                            }
                         }
                     }
                 }
@@ -87,11 +171,14 @@ footer.footer {
             display: flex;
             align-items: center;
             justify-content: flex-start;
-            opacity: .5;
+
+            .text {
+                opacity: .5;
+            }
 
             ul {
-                margin-left: 20px;
-                margin-bottom: 0;
+                margin-left: 20px !important;
+                margin-bottom: 0 !important;
 
                 li {
                     margin: 0 10px 0 0;
@@ -102,6 +189,7 @@ footer.footer {
                     &:last-child {
                         margin-right: 0;
                         padding-right: 0;
+
                         &:after {
                             content: none;
                         }
@@ -120,6 +208,13 @@ footer.footer {
 
                     a {
                         font-weight: 400;
+                        transition: opacity 0.3s ease-in-out;
+                        opacity: .5;
+
+                        &:hover,
+                        &:focus {
+                            opacity: 1 !important;
+                        }
                     }
                 }
             }

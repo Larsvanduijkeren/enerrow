@@ -6,18 +6,18 @@ section.marquee {
         padding-bottom: 40px !important;
     }
 
-    &.green .js-marquee .text {
+    &.green .text {
         color: $green;
     }
 
     .marquee-slider {
-        height: 120px;
+        height: 140px;
     }
 
     .text {
         margin-bottom: 0;
         margin-right: 20px;
-        font-size: 120px;
+        font-size: 140px;
         font-family: $font-pixel;
         font-weight: 400;
     }

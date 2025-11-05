@@ -15,7 +15,7 @@ $id = get_field('id');
 >
     <div class="card">
         <div class="container">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($title) === false) : ?>
                     <h1><?php echo $title; ?></h1>
                 <?php endif; ?>
@@ -37,7 +37,7 @@ $id = get_field('id');
 
             <?php if (empty($plans) === false) : ?>
                 <div class="plans">
-                    <div class="control">
+                    <div class="control" data-aos="fade-up">
                         <span class="label">Monthly</span>
                         <span class="toggle">
                             <span class="ball"></span>
@@ -46,7 +46,7 @@ $id = get_field('id');
                     </div>
 
                     <?php if (empty($plans) === false) : ?>
-                        <div class="plans-wrapper">
+                        <div class="plans-wrapper" data-aos="fade-up">
                             <?php foreach ($plans as $plan) : ?>
                                 <div class="plan">
                                     <div class="group">
@@ -60,12 +60,16 @@ $id = get_field('id');
 
                                         <?php if (empty($plan['monthly_price']) === false) : ?>
                                             <span
-                                                class="monthly-price"><span>&euro;</span><?php echo $plan['monthly_price']; ?></span>
+                                                class="monthly-price active"><span>&euro;</span><?php echo $plan['monthly_price']; ?></span>
                                         <?php endif; ?>
 
                                         <?php if (empty($plan['yearly_price']) === false) : ?>
                                             <span class="yearly-price"><span>&euro;</span><?php echo $plan['yearly_price']; ?></span>
                                         <?php endif; ?>
+
+                                        <?php if(empty($plan['button']) === false) {
+                                            echo sprintf('<a href="%s" target="%s" class="btn">%s</a>', $plan['button']['url'], $plan['button']['target'], $plan['button']['title']);
+                                        } ?>
                                     </div>
 
                                     <?php if (empty($plan['features']) === false) : ?>

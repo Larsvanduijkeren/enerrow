@@ -1,4 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+@font-face {
+    font-family: 'Kinetika';
+    src: url('../library/fonts/Kinetika-Bold.eot'),
+    url('../library/fonts/Kinetika-Bold.woff') format('woff'),
+    url('../library/fonts/Kinetika-Bold.ttf') format('truetype'),
+    url('../library/fonts/Kinetika-Bold.svg') format('svg');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Kinetika';
+    src: url('../library/fonts/Kinetika-Medium.eot'),
+    url('../library/fonts/Kinetika-Medium.woff') format('woff'),
+    url('../library/fonts/Kinetika-Medium.ttf') format('truetype'),
+    url('../library/fonts/Kinetika-Medium.svg') format('svg');
+    font-style: normal;
+    font-weight: 500;
+}
+
 @font-face {
     font-family: 'Iconfont';
     src: url('../library/fonts/icomoon.eot'),

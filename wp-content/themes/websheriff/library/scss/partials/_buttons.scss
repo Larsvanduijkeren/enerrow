@@ -6,7 +6,7 @@ input[type=submit] {
     display: inline-flex;
     background-color: $white !important;
     color: $black !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
     font-size: 1rem;
     padding: 10px 20px !important;
     font-family: $font-body;
@@ -14,7 +14,7 @@ input[type=submit] {
     border-radius: 100px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer !important;
     outline: none;
     box-shadow: none;
     border: 1px solid rgba(0,0,0,0.1);
@@ -28,31 +28,49 @@ input[type=submit] {
 
     &.calendar:before {
         @extend .icon-font;
-        content: '\e900';
+        content: '\e90b';
         margin-right: 10px;
     }
 
     &.arrow:before {
         @extend .icon-font;
-        content: '\e901';
+        content: '\e908';
         margin-right: 10px;
+        position: relative;
+        transform: rotate(135deg);
+        font-size: .7rem;
     }
 
     &.forward-arrow:before {
         @extend .icon-font;
-        content: '\e902';
+        content: '\e908';
         margin-right: 10px;
+        font-size: .7rem;
     }
 
     &.blue {
         background: $blue !important;
         border-color: $blue !important;
         color: $white !important;
+
+        &:hover,
+        &:focus {
+            background: $black !important;
+            color: $white !important;
+            border-color: $black !important;
+        }
     }
 
     &.green {
         background: $green !important;
         border-color: $green !important;
+
+        &:hover,
+        &:focus {
+            background: $black !important;
+            color: $white !important;
+            border-color: $black !important;
+        }
     }
 }
 

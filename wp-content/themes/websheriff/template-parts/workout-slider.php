@@ -12,7 +12,7 @@ $id = get_field('id');
 >
     <div class="container">
         <?php if (empty($workouts) === false) : ?>
-            <div class="slider">
+            <div class="slider" data-aos="fade-up">
                 <?php foreach ($workouts as $workout) :
                     $workout_description = get_field('description', $workout);
                     $workout_booking_link = get_field('booking_link', $workout);
@@ -21,7 +21,7 @@ $id = get_field('id');
                     ?>
                     <div class="workout">
                         <div class="flex-wrapper">
-                            <div class="content" data-aos="fade-up">
+                            <div class="content">
                                 <h2><?php echo get_the_title($workout); ?></h2>
                                 <?php if (empty($workout_description) === false) {
                                     echo $workout_description;
@@ -32,7 +32,7 @@ $id = get_field('id');
                                 } ?>
                             </div>
 
-                            <div class="info" data-aos="fade-up">
+                            <div class="info">
                                 <?php if (empty($workout_stats) === false) : ?>
                                     <div class="stats">
                                         <?php foreach ($workout_stats as $stat) : ?>
@@ -42,12 +42,11 @@ $id = get_field('id');
                                                 <?php endif; ?>
 
                                                 <?php if (empty($stat['title']) === false) : ?>
-                                                    <span class="stat-title"><?php echo $stat['title']; ?></span>
+                                                    <h4><?php echo $stat['title']; ?></h4>
                                                 <?php endif; ?>
 
                                                 <?php if (empty($stat['description']) === false) : ?>
-                                                    <span
-                                                        class="stat-description"><?php echo $stat['description']; ?></span>
+                                                    <p><?php echo $stat['description']; ?></p>
                                                 <?php endif; ?>
                                             </div>
                                         <?php endforeach; ?>
@@ -59,18 +58,15 @@ $id = get_field('id');
                                         <?php foreach ($workout_usps as $usp) : ?>
                                             <div class="usp">
                                                 <?php if (empty($usp['icon']) === false) : ?>
-                                                    <span class="image">
-                                                        <img src="<?php echo $usp['icon']['sizes']['medium']; ?>"
-                                                             alt="<?php echo $usp['icon']['alt']; ?>">
-                                                    </span>
+                                                    <img class="style-svg" src="<?php echo $usp['icon']['sizes']['medium']; ?>"
+                                                         alt="<?php echo $usp['icon']['alt']; ?>">
                                                 <?php endif; ?>
                                                 <?php if (empty($usp['title']) === false) : ?>
-                                                    <span class="usp-title"><?php echo $usp['title']; ?></span>
+                                                    <h4 class="usp-title"><?php echo $usp['title']; ?></h4>
                                                 <?php endif; ?>
 
                                                 <?php if (empty($usp['description']) === false) : ?>
-                                                    <span
-                                                        class="usp-description"><?php echo $usp['description']; ?></span>
+                                                    <p><?php echo $usp['description']; ?></p>
                                                 <?php endif; ?>
                                             </div>
                                         <?php endforeach; ?>

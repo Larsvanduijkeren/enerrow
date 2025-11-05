@@ -120,9 +120,9 @@ main section:first-child {
     width: 50px;
     height: 50px;
     background: $blue;
-    border: 1px solid $white;
+    border: 1px solid $green;
     display: inline-flex;
-    margin-left: 5px;
+    margin-right: 5px;
     transition: all 0.3s ease-in-out;
 
     &:hover,
@@ -137,62 +137,25 @@ main section:first-child {
     &:before {
         @extend .icon-font;
         font-size: 1.2rem;
-        color: $white;
+        color: $green;
         transition: all 0.3s ease-in-out;
     }
 
     &.linkedin:before {
-        content: '\e908';
+        content: '\e900';
     }
 
     &.instagram::before {
-        content: '\e901';
+        content: '\e909';
     }
 
     &.tiktok::before {
-        content: '\e900';
+        content: '\e90a';
     }
 }
 
 button.lity-close:after {
     content: none !important;
-}
-
-.slick-dots {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-
-    li {
-        width: 15px;
-        height: 6px;
-        position: relative;
-        background: $white;
-        opacity: .3;
-        border-radius: 5px;
-        margin: 0 2px;
-        transition: all 0.3s ease-in-out;
-
-        &:before {
-            content: none;
-        }
-
-        &:hover,
-        &:focus,
-        &.slick-active {
-            background: $white;
-            opacity: 1;
-        }
-
-        &.slick-active {
-            width: 60px;
-        }
-
-        button {
-            display: none;
-        }
-    }
 }
 
 
@@ -209,11 +172,11 @@ button.lity-close:after {
     text-align: center;
 
     li {
-        width: 8px !important;
-        height: 8px !important;
+        width: 12px !important;
+        height: 12px !important;
         position: relative;
-        background: $text;
-        opacity: .3;
+        background: $green;
+        opacity: .75;
         border-radius: 100%;
         margin: 0 4px;
         transition: all 0.3s ease-in-out;
@@ -226,7 +189,7 @@ button.lity-close:after {
         &:hover,
         &:focus,
         &.slick-active {
-            background: $text;
+            background: $blue;
             opacity: 1;
         }
 

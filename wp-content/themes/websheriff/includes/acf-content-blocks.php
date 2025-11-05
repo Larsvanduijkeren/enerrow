@@ -19,6 +19,7 @@ add_action('acf/init', function () {
     if (function_exists('acf_register_block')) {
 
         $blocks = [
+            'concepts'       => 'Concepts',
             'contact'        => 'Contact',
             'cta-deal'       => 'CTA Deal',
             'cta-device'     => 'CTA Device',

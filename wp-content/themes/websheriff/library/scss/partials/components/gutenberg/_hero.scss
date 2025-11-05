@@ -16,12 +16,26 @@ section.hero {
                 background: $green !important;
                 color: $black !important;
                 border-color: $green !important;
+
+                &:hover,
+                &:focus {
+                    background: $black !important;
+                    color: $white !important;
+                    border-color: $black !important;
+                }
             }
 
             .btn:nth-child(2) {
                 background: transparent !important;
                 color: $white !important;
                 border-color: $white !important;
+
+                &:hover,
+                &:focus {
+                    background: $black !important;
+                    color: $white !important;
+                    border-color: $black !important;
+                }
             }
         }
     }
@@ -42,12 +56,26 @@ section.hero {
                 background: $blue !important;
                 color: $white !important;
                 border-color: $blue !important;
+
+                &:hover,
+                &:focus {
+                    background: $black !important;
+                    color: $white !important;
+                    border-color: $black !important;
+                }
             }
 
             .btn:nth-child(2) {
                 background: transparent !important;
                 color: $blue !important;
                 border-color: $blue !important;
+
+                &:hover,
+                &:focus {
+                    background: $black !important;
+                    color: $white !important;
+                    border-color: $black !important;
+                }
             }
         }
     }
@@ -146,7 +174,7 @@ section.hero {
             }
 
             .content {
-                margin-top: 300px;
+                margin-top: 280px;
                 padding: 0 30px;
                 position: relative;
                 z-index: 5;

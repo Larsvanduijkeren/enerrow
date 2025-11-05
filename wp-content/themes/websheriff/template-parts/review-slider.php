@@ -26,84 +26,81 @@ $reviews = $query->posts;
     } ?>"
 >
     <div class="container">
-        <div class="flex-wrapper">
-            <div class="content" >
-                <?php if (empty($rating_score) === false) : ?>
-                    <div class="card blue" data-aos="fade-up"
-                        <h4>Out of all ratings</h4>
+        <div class="grid">
+            <?php if (empty($rating_score) === false) : ?>
+            <div class="card blue" data-aos="fade-up"
+            <h4>Out of all ratings</h4>
 
-                        <div class="score"><?php echo $rating_score; ?></div>
-                    </div>
-                <?php endif; ?>
+            <div class="score"><?php echo $rating_score; ?></div>
+        </div>
+        <?php endif; ?>
 
-                <?php if (empty($title) === false) : ?>
-                    <div class="card green" data-aos="fade-up">
-                        <h4><?php echo $title; ?></h4>
+        <?php if (empty($title) === false) : ?>
+            <div class="card green" data-aos="fade-up">
+                <h4><?php echo $title; ?></h4>
 
-                        <?php if (empty($text) === false) {
-                            echo $text;
-                        } ?>
-                    </div>
-                <?php endif; ?>
+                <?php if (empty($text) === false) {
+                    echo $text;
+                } ?>
             </div>
+        <?php endif; ?>
 
-            <div class="reviews" data-aos="fade-up">
-                <?php if (empty($reviews) === false) : ?>
-                    <div class="slider">
-                        <?php foreach ($reviews as $review) :
-                            $review_score = get_field('score', $review);
-                            $review_text = get_field('text', $review);
-                            $review_author = get_field('author', $review);
-                            $review_author_image = get_field('author_image', $review);
-                            ?>
-                            <div class="review">
-                                <?php if (empty($review_text) === false) : ?>
-                                    <p>"<?php echo $review_text; ?>"</p>
-                                <?php endif; ?>
+        <div class="reviews" data-aos="fade-up">
+            <?php if (empty($reviews) === false) : ?>
+                <div class="slider">
+                    <?php foreach ($reviews as $review) :
+                        $review_score = get_field('score', $review);
+                        $review_text = get_field('text', $review);
+                        $review_author = get_field('author', $review);
+                        $review_author_image = get_field('author_image', $review);
+                        ?>
+                        <div class="review">
+                            <?php if (empty($review_text) === false) : ?>
+                                <p>"<?php echo $review_text; ?>"</p>
+                            <?php endif; ?>
 
-                                <?php if (empty($review_author) === false) : ?>
-                                    <div class="author">
-                                        <?php if (empty($review_author_image) === false) : ?>
-                                            <img src="<?php echo $review_author_image['sizes']['medium']; ?>"
-                                                 alt="<?php echo $review_author_image['alt']; ?>">
+                            <?php if (empty($review_author) === false) : ?>
+                                <div class="author">
+                                    <?php if (empty($review_author_image) === false) : ?>
+                                        <img src="<?php echo $review_author_image['sizes']['medium']; ?>"
+                                             alt="<?php echo $review_author_image['alt']; ?>">
+                                    <?php endif; ?>
+
+                                    <div class="info">
+                                        <span class="name"><?php echo $review_author; ?></span>
+
+                                        <?php if (empty($review_score) === false) : ?>
+                                            <div class="rating">
+                                                <span class="star <?php if ($review_score >= 1) {
+                                                    echo 'active';
+                                                } ?>"></span>
+
+                                                <span class="star <?php if ($review_score >= 2) {
+                                                    echo 'active';
+                                                } ?>"></span>
+
+                                                <span class="star <?php if ($review_score >= 3) {
+                                                    echo 'active';
+                                                } ?>"></span>
+
+                                                <span class="star <?php if ($review_score >= 4) {
+                                                    echo 'active';
+                                                } ?>"></span>
+
+                                                <span class="star <?php if ($review_score >= 5) {
+                                                    echo 'active';
+                                                } ?>"></span>
+                                            </div>
                                         <?php endif; ?>
-
-                                        <div class="info">
-                                            <span class="name"><?php echo $review_author; ?></span>
-
-                                            <?php if (empty($review_score) === false) : ?>
-                                                <div class="rating">
-                                                    <span class="star <?php if ($review_score >= 1) {
-                                                        echo 'active';
-                                                    } ?>"></span>
-
-                                                    <span class="star <?php if ($review_score >= 2) {
-                                                        echo 'active';
-                                                    } ?>"></span>
-
-                                                    <span class="star <?php if ($review_score >= 3) {
-                                                        echo 'active';
-                                                    } ?>"></span>
-
-                                                    <span class="star <?php if ($review_score >= 4) {
-                                                        echo 'active';
-                                                    } ?>"></span>
-
-                                                    <span class="star <?php if ($review_score >= 5) {
-                                                        echo 'active';
-                                                    } ?>"></span>
-                                                </div>
-                                            <?php endif; ?>
-                                        </div>
                                     </div>
-                                <?php endif; ?>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                <?php else : ?>
-                    <h3>No reviews were found</h3>
-                <?php endif; ?>
-            </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php else : ?>
+                <h3>No reviews were found</h3>
+            <?php endif; ?>
         </div>
     </div>
 </section>

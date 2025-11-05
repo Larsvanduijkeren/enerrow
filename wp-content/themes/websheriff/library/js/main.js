@@ -8,6 +8,8 @@ jQuery.noConflict();
         headerController();
         marquee();
         reviewSlider();
+        workoutSlider();
+        pricingToggle();
 
         if ($(window).width() > 991) {
             lenis();
@@ -23,6 +25,34 @@ jQuery.noConflict();
             });
         }
     });
+
+    let pricingToggle = () => {
+        $('.pricing .control').click(function () {
+            if ($(this).hasClass('yearly')) {
+                $(this).removeClass('yearly');
+                $('.pricing .yearly-price').removeClass('active');
+                $('.pricing .monthly-price').addClass('active');
+            } else {
+                $(this).addClass('yearly');
+                $('.pricing .yearly-price').addClass('active');
+                $('.pricing .monthly-price').removeClass('active');
+            }
+        })
+    }
+
+    let workoutSlider = () => {
+        let slider = $(".workout-slider .slider");
+
+        if (slider && slider.length > 0) {
+            slider.slick({
+                autoplay: false,
+                fade: true,
+                dots: true,
+                arrows: false,
+                slidesToShow: 1,
+            });
+        }
+    }
 
     let reviewSlider = () => {
         let slider = $(".review-slider .slider");
@@ -146,9 +176,15 @@ jQuery.noConflict();
 
         // Debounced relayout on resize/orientation
         const debounce = (fn, ms = 150) => {
-            let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn.apply(null, a), ms); };
+            let t;
+            return (...a) => {
+                clearTimeout(t);
+                t = setTimeout(() => fn.apply(null, a), ms);
+            };
         };
-        const relayout = debounce(() => { if (casesIso) casesIso.isotope('layout'); }, 150);
+        const relayout = debounce(() => {
+            if (casesIso) casesIso.isotope('layout');
+        }, 150);
 
         $(window).on('resize orientationchange', relayout);
 

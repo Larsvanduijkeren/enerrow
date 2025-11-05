@@ -34,6 +34,13 @@ section.contact {
             .buttons .btn:nth-child(2) {
                 background: transparent !important;
                 color: $white !important;
+
+                &:hover,
+                &:focus {
+                    background: $black !important;
+                    color: $white !important;
+                    border-color: $black !important;
+                }
             }
         }
     }
@@ -61,7 +68,7 @@ section.contact {
 
             h3 {
                 font-size: 1rem;
-                margin-bottom: 0;
+                margin-bottom: 5px;
                 text-transform: uppercase;
                 font-weight: 700;
             }
@@ -91,6 +98,11 @@ section.contact {
                 }
             }
 
+            .email:before {
+                content: '\e906';
+                font-size: .8rem;
+            }
+
             a {
                 color: $text;
             }
@@ -104,7 +116,7 @@ section.contact {
             }
         }
 
-        .map {
+        .mapbox {
             margin-left: -80px;
             width: calc(60% + 160px);
             max-width: calc(60% + 160px);

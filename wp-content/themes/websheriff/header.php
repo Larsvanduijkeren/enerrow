@@ -13,8 +13,12 @@
 
     <?php wp_head(); ?>
 </head>
+<?php
+wp_body_open();
 
-<body <?php body_class(); ?>>
+$page_theme = get_field('page_theme');
+?>
+<body <?php body_class($page_theme); ?>>
 
 <?php
 wp_body_open();
@@ -51,7 +55,7 @@ $buttons = get_field('buttons', 'option');
 <header class='header'>
     <div class='container'>
         <div class='flex-wrapper'>
-            <a href='/' class='logo' aria-label="Logo Enerrow">
+            <a href='/enerrow' class='logo' aria-label="Logo Enerrow">
                 <?php if (empty($logo) === false) : ?>
                     <img src='<?php echo $logo['sizes']['large']; ?>' alt='<?php echo $logo['alt']; ?>'>
                 <?php endif; ?>

@@ -1,0 +1,501 @@
+$es_green: #CFFF04;
+$es_black: black;
+$es_grey: #656565;
+
+.enerstudios {
+    background: $es_green;
+    padding: 10px;
+
+    .container {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+
+    .page-content {
+        padding: 0 !important;
+    }
+
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5 {
+        color: $es_green !important;
+    }
+
+    .btn {
+        &.blue,
+        &.green {
+            background: $es_green !important;
+            border-color: $es_green !important;
+            color: $es_black !important;
+        }
+    }
+
+    header {
+        display: none !important;
+    }
+
+    footer.footer {
+        .container {
+            padding-top: 80px !important;
+        }
+
+        .card .copyright-wrapper ul li:after {
+            background: rgba(0,0,0,0.4);
+        }
+
+        .card {
+            margin: 0;
+            padding: 0;
+            background: transparent;
+            border-radius: 0;
+            color: $es_black;
+
+            a,
+            h4 {
+                color: $es_black !important;
+            }
+
+            .flex-wrapper > * .btn {
+                background: $es_black !important;
+                border-color: $es_black !important;
+                color: $es_green !important;
+
+                &:hover,
+                &:focus {
+                    background: $es_green !important;
+                    border-color: $es_black !important;
+                    color: $es_black !important;
+                }
+            }
+        }
+
+        .flex-wrapper {
+            > * {
+                display: none;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .social a {
+        background: $es_black;
+        border-color: $es_green;
+
+        &:before {
+            color: $es_green;
+        }
+
+        &:hover,
+        &:focus {
+            background: $es_green;
+            cursor: pointer;
+
+            &:before {
+                color: $es_black;
+            }
+        }
+    }
+
+    .slick-dots li.slick-active {
+        background: $es_green;
+    }
+
+    section {
+        background: $es_black;
+        color: $es_green;
+
+        &:first-child {
+            border-top-left-radius: $radius-mid;
+            border-top-right-radius: $radius-mid;
+        }
+
+        &:last-child {
+            border-bottom-left-radius: $radius-mid;
+            border-bottom-right-radius: $radius-mid;
+        }
+
+        &.hero {
+            &.large {
+                + section .container {
+                    padding-top: 0 !important;
+                }
+
+                .card {
+                    margin: 0 !important;
+                    background: transparent;
+                    color: $es_green;
+
+                    .flex-wrapper {
+                        .image {
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                        }
+
+                        .content {
+                            padding: 0 40px;
+
+                            .btn:nth-child(1) {
+                                background: $es_green !important;
+                                border-color: $es_green !important;
+                                color: $es_black !important;
+
+                                &:hover,
+                                &:focus {
+                                    background: $es_black !important;
+                                    border-color: $es_green !important;
+                                    color: $es_green !important;
+                                }
+                            }
+
+                            .btn:nth-child(2) {
+                                background: $es_black !important;
+                                border-color: $es_green !important;
+                                color: $es_green !important;
+
+                                &:hover,
+                                &:focus {
+                                    background: $es_green !important;
+                                    border-color: $es_green !important;
+                                    color: $es_black !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:not(.large) {
+                .card {
+                    margin: 0 !important;
+                    background: transparent;
+                    color: $es_green;
+
+                    .flex-wrapper {
+                        .image {
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                        }
+
+                        .content {
+                            padding: 0 15px;
+
+                            .btn:nth-child(1) {
+                                background: $es_green !important;
+                                border-color: $es_green !important;
+                                color: $es_black !important;
+                            }
+
+                            .btn:nth-child(2) {
+                                background: $es_black !important;
+                                border-color: $es_green !important;
+                                color: $es_green !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.text-image {
+            .content {
+                background: $es_green;
+                color: $es_black;
+
+                h2 {
+                    color: $es_black !important;
+                }
+
+                a {
+                    color: $black
+                }
+
+                .btn {
+                    background: $es_black !important;
+                    border-color: $es_black !important;
+                    color: $es_green !important;
+                }
+            }
+        }
+
+        &.concepts {
+            h2 {
+                color: $white !important;
+            }
+
+            .concepts-list .concept {
+                border-color: rgba(255,255,255,0.1);
+
+                .text {
+                    color: $es_grey;
+                }
+
+                .circle-btn {
+                    background: $white;
+
+                    &:before {
+                        color: $es_black;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background: $es_green;
+                    }
+                }
+
+                .coming-soon {
+                    color: $white;
+                }
+            }
+        }
+
+        &.team-archive {
+            .card {
+                &:before {
+                    content: none;
+                }
+
+                .buttons {
+                    .btn:nth-child(1) {
+                        background: $es_green !important;
+                        border-color: $es_green !important;
+                        color: $es_black !important;
+                    }
+
+                    .btn:nth-child(2) {
+                        background: $es_black !important;
+                        border-color: $es_green !important;
+                        color: $es_green !important;
+                    }
+                }
+
+                .masonry .team-member {
+                    background: transparent;
+                    border-color: rgba(207, 255, 4, 0.25);
+
+                    h3 {
+                        padding: 0 0 0 10px;
+                        background: transparent;
+                        border-radius: 0;
+                        color: $es_green
+                    }
+
+                }
+            }
+        }
+
+        &.pricing {
+            .card {
+                &:before {
+                    content: none;
+                }
+
+                .buttons {
+                    .btn:nth-child(1) {
+                        background: $es_green !important;
+                        border-color: $es_green !important;
+                        color: $es_black !important;
+                    }
+
+                    .btn:nth-child(2) {
+                        background: $es_black !important;
+                        border-color: $es_green !important;
+                        color: $es_green !important;
+                    }
+                }
+
+                .plans-wrapper .plan .group {
+                    background: transparent;
+                }
+            }
+        }
+
+        &.contact {
+            .card {
+                &:before {
+                    content: none;
+                }
+
+                .buttons {
+                    .btn:nth-child(1) {
+                        background: $es_green !important;
+                        border-color: $es_green !important;
+                        color: $es_black !important;
+                    }
+
+                    .btn:nth-child(2) {
+                        background: $es_black !important;
+                        border-color: $es_green !important;
+                        color: $es_green !important;
+                    }
+                }
+
+                .flex-wrapper {
+                    .text-wrap {
+                        background: $es_green;
+                        color: $es_black;
+
+                        h2 {
+                            color: $es_black !important;
+                        }
+
+                        a {
+                            color: $black
+                        }
+
+                        .btn {
+                            background: $es_black !important;
+                            border-color: $es_black !important;
+                            color: $es_green !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.workout-slider {
+            .flex-wrapper {
+                .content {
+                    background: $es_green;
+                    color: $es_black;
+
+                    h2 {
+                        color: $es_black !important;
+                    }
+
+                    a {
+                        color: $black
+                    }
+
+                    .btn {
+                        background: $es_black !important;
+                        border-color: $es_black !important;
+                        color: $es_green !important;
+
+                        &:hover,
+                        &:focus {
+                            background: $es_green !important;
+                            border-color: $es_black !important;
+                            color: $es_black !important;
+                        }
+                    }
+                }
+
+                .info {
+                    .stats .stat-score {
+                        border-color: $es_green;
+                    }
+
+                    .usps .usp {
+                        border-color: rgba(207, 255, 4, 0.25);
+
+                        svg * {
+                            fill: $es_green;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.cta-deal {
+            .card .content {
+                background: $es_green;
+                color: $es_black;
+
+                h2 {
+                    color: $es_black !important;
+                }
+
+                a {
+                    color: $black
+                }
+
+                .btn {
+                    background: $es_black !important;
+                    border-color: $es_black !important;
+                    color: $es_green !important;
+
+                    &:hover,
+                    &:focus {
+                        background: $es_green !important;
+                        border-color: $es_black !important;
+                        color: $es_black !important;
+                    }
+                }
+            }
+
+            .deal {
+                border-color: $es_black !important;
+
+                h3 {
+                    color: $es_black !important;
+
+                    span {
+                        color: $es_black !important;
+                    }
+                }
+            }
+        }
+
+        &.marquee {
+            .text {
+                color: $es_grey !important;
+            }
+        }
+
+        &.cta-device {
+            .card {
+                background: $es_green;
+                color: $es_black;
+
+                h2 {
+                    color: $es_black !important;
+                }
+
+                a {
+                    color: $black
+                }
+
+                .btn {
+                    background: $es_black !important;
+                    border-color: $es_black !important;
+                    color: $es_green !important;
+                }
+            }
+        }
+
+        &.review-slider {
+            .grid {
+                &:before {
+                    background: $es_black;
+                }
+
+                .card.blue,
+                .card.green {
+                    background: $es_green !important;
+                    color: $es_black;
+
+                    .score,
+                    h4 {
+                        color: $es_black !important;
+                    }
+                }
+
+                .reviews .review {
+                    border-color: rgba(207, 255, 4, 0.25);
+                }
+            }
+        }
+    }
+}

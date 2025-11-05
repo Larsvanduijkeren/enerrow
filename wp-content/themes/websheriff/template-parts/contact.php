@@ -19,6 +19,11 @@ $id = get_field('id');
         echo $id;
     } ?>"
 >
+    <script>
+        let latitude = <?php echo get_field('latitude') ?>;
+        let longitude = <?php echo get_field('longitude') ?>;
+    </script>
+
     <div class="card">
         <div class="container">
             <div class="content" data-aos="fade-up">
@@ -76,8 +81,11 @@ $id = get_field('id');
                     <?php endif; ?>
                 </div>
 
-                <div class="map" data-aos="fade-up">
-                </div>
+                <div
+                    data-aos="fade-up"
+                    class='mapbox'
+                    id='mapbox'
+                >
             </div>
         </div>
     </div>

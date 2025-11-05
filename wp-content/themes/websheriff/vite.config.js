@@ -23,6 +23,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: path.resolve(__dirname, 'library/js/main.js'),
+                map: path.resolve(__dirname, 'library/js/map.js'),
                 mainStyle: path.resolve(__dirname, 'library/scss/main.scss'),
                 gutenberg: path.resolve(__dirname, 'library/scss/gutenberg.scss'),
             },

@@ -1,42 +1,16 @@
 section {
     ul,
     ol {
-        margin: 0 0 $gutter-small 0 !important;
+        margin: 0 0 20px 0;
         padding: 0;
 
         li {
-            margin: 0 0 0 20px;
+            margin: 0 0 5px 17px;
             padding: 0;
-        }
-    }
 
-    ol li {
-        margin-bottom: 5px;
-
-        &:last-child {
-            margin-bottom: 10;
-        }
-    }
-
-    ul li {
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        list-style: none;
-        padding: 0;
-        margin: 0 0 10px 0;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &:before {
-            @extend .icon-font;
-            content: '\e915';
-            margin-right: 10px;
-            font-size: 1.2rem;
-            margin-top: 3px;
-            color: $green;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }

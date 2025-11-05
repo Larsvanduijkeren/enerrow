@@ -36,9 +36,43 @@ section.pricing {
 
         .control {
             margin-left: auto;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
             text-align: right;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            gap: 10px;
+            font-family: sans-serif;
+            color: #0033aa;
+
+            .toggle {
+                position: relative;
+                width: 36px;
+                height: 24px;
+                background: #0033aa;
+                border-radius: 999px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+
+                .ball {
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 18px;
+                    height: 18px;
+                    background: #fff;
+                    border-radius: 50%;
+                    transition: left 0.3s ease;
+                }
+            }
+
+            &.yearly .toggle {
+                background: #0033aa;
+
+                .ball {
+                    left: 14px;
+                }
+            }
         }
 
         .plans-wrapper {
@@ -46,42 +80,47 @@ section.pricing {
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
+            margin: -10px;
 
             > * {
-                width: 25%;
-                max-width: 25%;
-                flex-basis: 25%;
+                width: calc(25% - 20px);
+                max-width: calc(25% - 20px);
+                flex-basis: calc(25% - 20px);
+                margin: 10px;
             }
 
             .plan {
-                border-left: 1px solid $green;
-                border-top: 1px solid $green;
-
-                &:first-child {
-                    .group {
-                        &:first-child {
-                            border-radius: $radius-mid 0 0 0;
-                        }
-
-                        &:last-child {
-                            border-radius: 0 0 0 $radius-mid;
-                        }
-                    }
-                }
+                border: 1px solid $green;
+                border-radius: $radius-mid;
+                background: $white;
 
                 .group {
                     padding: 20px;
-                    background: $white;
-                    border-right: 1px solid $green;
-                    border-bottom: 1px solid $green;
                     text-align: center;
+                    border-bottom: 1px solid $green;
+
+                    &:last-child {
+                        border: none;
+                    }
 
                     &:first-child {
                         padding: 40px;
                     }
 
                     .yearly-price {
-                        display: none !important;
+                        display: none;
+                    }
+
+                    .btn {
+                        margin-top: 20px;
+                        border-color: $blue;
+                        color: $blue !important;
+
+                        &:hover,
+                        &:focus {
+                            background: $blue !important;
+                            color: $green !important;
+                        }
                     }
 
                     .yearly-price,
@@ -89,11 +128,15 @@ section.pricing {
                         font-size: 80px;
                         font-weight: 400;
                         font-family: $font-pixel;
-                        display: flex;
+                        display: none;
                         align-items: flex-start;
                         justify-content: center;
                         line-height: 1;
                         margin-left: -20px;
+
+                        &.active {
+                            display: flex !important;
+                        }
 
                         span {
                             font-family: $font-body;

@@ -28,7 +28,7 @@ $team_members = $query->posts;
 >
     <div class="card">
         <div class="container">
-            <div class="content">
+            <div class="content" data-aos="fade-up">
                 <?php if (empty($title) === false) : ?>
                     <h1><?php echo $title; ?></h1>
                 <?php endif; ?>
@@ -49,7 +49,7 @@ $team_members = $query->posts;
             </div>
 
             <?php if (empty($team_members) === false) : ?>
-                <div class="masonry">
+                <div class="masonry" data-aos="fade-up">
                     <div class="grid-sizer"></div>
                     <div class="gutter-sizer"></div>
 
