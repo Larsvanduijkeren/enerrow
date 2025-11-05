@@ -299,28 +299,21 @@ header.header {
     }
 }
 
-@media only screen and (max-width: 1200px) {
-    header.header {
-        .logo {
-            height: 50px !important;
-        }
-    }
-}
-
 @media only screen and (max-width: 991px) {
     header.header {
         height: 60px;
 
-        .top-wrapper {
+        .flex-wrapper {
             height: 60px;
+
+
+            .logo {
+                height: 30px;
+            }
 
             > div {
                 display: none;
             }
-        }
-
-        .bottom-wrapper {
-            display: none;
         }
     }
 }

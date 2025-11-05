@@ -86,3 +86,21 @@ section.concepts {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.concepts .concepts-list .concept {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        img,
+        .text {
+            margin: 0 0 20px 0;
+        }
+
+        .circle-btn,
+        .coming-soon {
+            margin: 0 auto;
+        }
+    }
+}

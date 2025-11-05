@@ -12,6 +12,7 @@ section.cta-deal {
             border-radius: $radius-mid;
             overflow: hidden;
             top: 80px;
+
             img {
                 position: absolute;
                 left: 0;
@@ -80,6 +81,25 @@ section.cta-deal {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    section.cta-deal {
+        padding-bottom: 120px !important;
+        .card {
+            .content {
+                padding: 20px;
+            }
+
+            .image {
+                height: calc(100% - 120px);
+                width: 100%;
+                border-radius: $radius-mid;
+                overflow: hidden;
+                top: 160px;
             }
         }
     }

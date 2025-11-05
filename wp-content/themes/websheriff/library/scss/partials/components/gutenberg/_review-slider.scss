@@ -152,3 +152,48 @@ section.review-slider {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.review-slider .grid {
+        &:before {
+            content: none;
+        }
+
+        .card:nth-child(1) {
+            order: 0;
+            grid-column: span 6;
+            padding: 20px;
+        }
+
+        .card:nth-child(2) {
+            order: 1;
+            grid-column: span 6;
+            padding: 20px;
+        }
+
+        .reviews {
+            grid-row: span 1;
+            grid-column: span 12;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.review-slider .grid {
+        .card:nth-child(1) {
+            order: 0;
+            grid-column: span 12;
+        }
+
+        .card:nth-child(2) {
+            order: 3;
+            grid-column: span 12;
+        }
+
+        .reviews {
+            order: 2;
+            grid-row: span 1;
+            grid-column: span 12;
+        }
+    }
+}

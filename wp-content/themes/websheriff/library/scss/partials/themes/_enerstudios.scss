@@ -498,4 +498,57 @@ $es_grey: #656565;
             }
         }
     }
+
+    .hamburger .line {
+        background: $es_green;
+    }
+
+    .mobile-nav {
+        .content {
+            background: $es_black;
+
+            .btn {
+                background: $es_green !important;
+                border-color: $es_green !important;
+                color: $es_black !important;
+
+                &:hover,
+                &:focus {
+                    background: $es_black !important;
+                    border-color: $es_green !important;
+                    color: $es_green !important;
+                }
+            }
+
+            .nav {
+                margin-top: 40px;
+
+                ul li {
+                    border-color: rgba(207, 255, 4, 0.25);
+
+                    a {
+                        color: $es_green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .enerstudios {
+        .container {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        section {
+            &.hero {
+                &.large .content {
+                    padding-left: 20px !important;
+                    padding-right: 20px !important;
+                }
+            }
+        }
+    }
 }

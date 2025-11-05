@@ -103,3 +103,52 @@ section.workout-slider {
         }
     }
 }
+
+@media only screen and (max-width: 991px) {
+    section.workout-slider {
+
+        .flex-wrapper {
+            display: block;
+            margin: 0;
+            .content {
+                padding: 20px;
+            }
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 40px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    section.workout-slider .flex-wrapper .info {
+        .stats + .usps {
+            margin-top: 40px;
+        }
+
+        .usps,
+        .stats {
+            display: block;
+            margin: 0;
+
+            > * {
+                width: 100%;
+                max-width: 100%;
+                flex-basis: 100%;
+                margin: 0 0 20px 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

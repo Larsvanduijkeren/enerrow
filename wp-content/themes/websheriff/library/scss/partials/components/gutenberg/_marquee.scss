@@ -30,6 +30,12 @@ section.marquee {
 
 @media only screen and (max-width: 991px) {
     section.marquee {
-        padding-top: 80px !important;
+        .text {
+            font-size: 90px;
+        }
+
+        .marquee-slider {
+            height: 90px;
+        }
     }
 }

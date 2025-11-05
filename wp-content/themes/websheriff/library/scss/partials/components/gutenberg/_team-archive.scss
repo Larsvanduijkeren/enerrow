@@ -117,6 +117,13 @@ section.team-archive {
     }
 }
 
+@media only screen and (max-width: 991px) {
+    section.team-archive .card .content {
+        padding-top: 80px;
+        padding-bottom: 160px;
+    }
+}
+
 @media (max-width: 600px) {
     section.team-archive {
         .masonry {
