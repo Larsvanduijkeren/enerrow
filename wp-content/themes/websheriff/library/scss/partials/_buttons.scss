@@ -17,7 +17,7 @@ input[type=submit] {
     cursor: pointer !important;
     outline: none;
     box-shadow: none;
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease-in-out;
 
     &.location:before {
@@ -30,6 +30,7 @@ input[type=submit] {
         @extend .icon-font;
         content: '\e90b';
         margin-right: 10px;
+        margin-top: 2px;
     }
 
     &.arrow:before {
@@ -51,7 +52,7 @@ input[type=submit] {
     &.blue {
         background: $blue !important;
         border-color: $blue !important;
-        color: $white !important;
+        color: $green !important;
 
         &:hover,
         &:focus {
@@ -107,5 +108,27 @@ input[type=submit] {
     * {
         margin-right: 10px;
         margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .btn,
+    button[type=submit]:not(.dgwt-wcas-search-submit),
+    input[type=submit] {
+        padding: 15px 20px !important;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .buttons {
+        > * {
+            display: flex;
+            width: 100%;
+            margin: 0 0 10px 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }

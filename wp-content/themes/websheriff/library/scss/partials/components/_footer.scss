@@ -222,17 +222,35 @@ footer.footer {
     }
 }
 
+@media only screen and (max-width: 1300px) {
+    footer.footer .card .flex-wrapper > * {
+        width: calc(50% - 40px) !important;
+        max-width: calc(50% - 40px) !important;
+        flex-basis: calc(50% - 40px) !important;
+    }
+}
+
 @media only screen and (max-width: 991px) {
     footer.footer .card {
+.container {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
         .flex-wrapper {
             display: block;
             margin: 0;
 
             > .col {
-                width: 100%;
-                max-width: 100%;
-                flex-basis: 100%;
+                width: 100% !important;
+                max-width: 100% !important;
+                flex-basis: 100% !important;
                 margin: 0 0 40px 0;
+
+                .btn {
+                display: flex;
+                width: 100%;
+                }
 
                 &:last-child {
                     margin-bottom: 0;

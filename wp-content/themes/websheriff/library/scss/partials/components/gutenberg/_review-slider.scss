@@ -186,14 +186,18 @@ section.review-slider {
         }
 
         .card:nth-child(2) {
-            order: 3;
+            order: 2;
             grid-column: span 12;
         }
 
         .reviews {
-            order: 2;
+            order: 3;
             grid-row: span 1;
             grid-column: span 12;
+
+            .slider .review p {
+            font-size: 1.25rem;
+            }
         }
     }
 }

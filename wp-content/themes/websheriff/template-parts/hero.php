@@ -1,4 +1,5 @@
 <?php
+$title_logo = get_field('title_logo');
 $color_theme = get_field('color_theme');
 $image_size = get_field('image_size');
 $image = get_field('image');
@@ -23,6 +24,11 @@ $id = get_field('id');
         <div class="container">
             <div class="flex-wrapper">
                 <div class="content">
+                    <?php if (empty($title_logo) === false) : ?>
+                            <img class="logo" src="<?php echo $title_logo['sizes']['medium']; ?>"
+                                 alt="<?php echo $title_logo['alt']; ?>">
+                    <?php endif; ?>
+
                     <?php if (empty($title) === false) : ?>
                         <h1><?php echo $title; ?></h1>
                     <?php endif; ?>

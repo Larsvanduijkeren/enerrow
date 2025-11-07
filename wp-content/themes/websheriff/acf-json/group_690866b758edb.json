@@ -89,6 +89,27 @@
             ]
         },
         {
+            "key": "field_690dbbfacfeed",
+            "label": "Language switcher shortcode",
+            "name": "language_switcher_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_690866e664a9b",
             "label": "Footer",
             "name": "",
@@ -341,5 +362,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762158380
+    "modified": 1762507778
 }

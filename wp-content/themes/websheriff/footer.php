@@ -10,8 +10,25 @@ $footer_title_4 = get_field('footer_title_4', 'option');
 $tiktok = get_field('tiktok', 'option');
 $instagram = get_field('instagram', 'option');
 $linkedin = get_field('linkedin', 'option');
+$language_switcher_shortcode = get_field('language_switcher_shortcode', 'option');
 ?>
+
 </main>
+
+<div class="lang-popup">
+    <span class="overlay"></span>
+    <div class="content">
+        <span class="close"></span>
+
+        <h4>Change the language?</h4>
+
+        <div class="shortcode">
+            <?php if (empty($language_switcher_shortcode) === false) {
+                echo do_shortcode($language_switcher_shortcode);
+            } ?>
+        </div>
+    </div>
+</div>
 
 <footer class='footer'>
     <div class="card">

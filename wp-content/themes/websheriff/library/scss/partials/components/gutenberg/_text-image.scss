@@ -100,12 +100,18 @@ section.text-image {
 
 @media only screen and (max-width: 991px) {
     section.text-image {
+&.media-first .flex-wrapper > .image {
+            border-radius: 20px 0 0 20px;
+            margin-left: 20px;
+}
+
         .flex-wrapper {
             display: block;
             margin: 0;
 
             > .content {
                 padding: 20px;
+                margin: 0;
             }
 
             > .content,
@@ -113,11 +119,11 @@ section.text-image {
                 width: 100%;
                 max-width: 100%;
                 flex-basis: 100%;
-                margin: 0 0 20px 0;
+            }
 
-                &:last-child {
-                    margin-bottom: 0;
-                }
+            > .image {
+            margin: -40px 0 0 -20px;
+            border-radius: 0 20px 20px 0;
             }
         }
     }

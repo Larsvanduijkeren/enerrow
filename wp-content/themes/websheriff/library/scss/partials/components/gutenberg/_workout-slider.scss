@@ -47,7 +47,7 @@ section.workout-slider {
                         justify-content: center;
                         width: 175px;
                         height: 175px;
-                        border: 8px solid $blue;
+                        border: 12px solid $blue;
                         margin: 0 auto 20px auto;
                         border-radius: 100%;
                     }
@@ -150,5 +150,12 @@ section.workout-slider {
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section.workout-slider .flex-wrapper .content .btn {
+        width: 100%;
+        display: flex;
     }
 }

@@ -10,6 +10,7 @@ jQuery.noConflict();
         reviewSlider();
         workoutSlider();
         pricingToggle();
+        languagePopup();
 
         if ($(window).width() > 991) {
             lenis();
@@ -25,6 +26,16 @@ jQuery.noConflict();
             });
         }
     });
+
+    let languagePopup = () => {
+        $('.lang-trigger').click(function () {
+            $('body').addClass('lang-popup-open');
+        })
+
+        $('.lang-popup .overlay, .lang-popup .close').click(function () {
+            $('body').removeClass('lang-popup-open');
+        })
+    }
 
     let pricingToggle = () => {
         $('.pricing .control').click(function () {

@@ -22,7 +22,7 @@
         flex-direction: column;
         position: relative;
         z-index: 10;
-        background: $green;
+        background: $blue;
 
         .nav {
             margin-top: 80px;
@@ -44,30 +44,8 @@
         }
     }
 
-    .phone,
-    .mail {
-        display: flex;
-        align-items: center;
-        color: $white;
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-size: 1rem;
-
-        &:before {
-            @extend .icon-font;
-            content: '\e909';
-            margin-right: 5px;
-            color: $green;
-        }
-
-        &.phone:before {
-            content: '\e90a';
-            font-size: .8rem;
-        }
-    }
-
     .social {
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
     .menu {
@@ -80,10 +58,17 @@
         text-align: center;
     }
 
-    .btn:nth-child(1) {
-        background: $blue !important;
-        color: $white !important;
-        border-color: $blue !important;
+    .buttons {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: stretch;
+        justify-content: flex-start;
+    }
+
+    .btn:nth-child(2) {
+        background: $green !important;
+        color: $blue !important;
+        border-color: $green !important;
 
         &:hover,
         &:focus {
@@ -93,10 +78,10 @@
         }
     }
 
-    .btn:nth-child(2) {
-        background: transparent !important;
-        color: $blue !important;
-        border-color: $blue !important;
+    .btn:nth-child(1) {
+        background: $blue !important;
+        color: $green !important;
+        border-color: $white !important;
 
         &:hover,
         &:focus {
@@ -114,17 +99,30 @@
             list-style: none;
             margin-left: 0;
             margin-bottom: 10px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             overflow: hidden;
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             a {
-                font-size: 1.65rem;
+                font-size: 1.75rem;
                 position: relative;
                 font-family: $font-titles;
-                display: block;
                 padding-right: 20px;
                 font-weight: 600;
+                color: $green;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &:after {
+                    @extend .icon-font;
+                    content: '\e908';
+                    position: relative;
+                    transform: rotate(45deg);
+                    font-size: .7rem;
+                }
             }
 
             &.menu-item-has-children,
@@ -211,21 +209,22 @@
     justify-content: center;
     margin-left: 10px;
     z-index: 250;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     background: transparent;
-    border-radius: 4px;
+    border-radius: 100%;
     margin-right: -10px;
     transition: background 0.3s ease-in-out;
     position: fixed;
     right: 25px;
     top: 30px;
     transform: translateY(-50%);
+    background: $blue;
 
     .line {
-        width: 25px;
+        width: 15px;
         height: 2px;
-        background: $text;
+        background: $green;
         position: absolute;
         left: 50%;
         border-radius: 4px;
@@ -233,11 +232,15 @@
         transition: all 0.3s ease-in-out;
 
         &.line-1 {
-            transform: translate(-50%, -4px);
+            transform: translate(-50%, -5px);
         }
 
         &.line-2 {
-            transform: translate(-50%, 4px);
+            transform: translate(-50%, 0);
+        }
+
+        &.line-3 {
+            transform: translate(-50%, 5px);
         }
     }
 }
@@ -250,7 +253,8 @@
     .mobile-nav-open .hamburger {
 
         .line-1,
-        .line-2 {
+        .line-2,
+        .line-3{
             width: 20px;
         }
 
@@ -259,6 +263,10 @@
         }
 
         .line-2 {
+            opacity: 0;
+        }
+
+        .line-3 {
             transform: translate(-50%, -50%) rotate(45deg);
         }
     }

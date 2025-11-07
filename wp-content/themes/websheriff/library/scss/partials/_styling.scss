@@ -22,3 +22,14 @@ section:not(.hero):not(.cta-device) {
         padding-top: 0 !important;
     }
 }
+
+section:not(.hero) + section.marquee {
+    margin-top: -80px;
+}
+
+@media only screen and (max-width: 991px) {
+    section:not(.hero) + section.marquee {
+        margin-top: -40px;
+    }
+
+}

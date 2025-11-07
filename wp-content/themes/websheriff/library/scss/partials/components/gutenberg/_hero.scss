@@ -1,4 +1,6 @@
 section.hero {
+    overflow: hidden;
+
     &.blue .card {
         background: $blue;
         color: $white;
@@ -51,10 +53,19 @@ section.hero {
             position: static;
         }
 
+        .logo {
+            display: block;
+            height: 20px;
+            max-width: 100%;
+            object-position: left top;
+            object-fit: contain;
+            margin-bottom: 20px;
+        }
+
         .buttons {
             .btn:nth-child(1) {
                 background: $blue !important;
-                color: $white !important;
+                color: $green !important;
                 border-color: $blue !important;
 
                 &:hover,
@@ -222,7 +233,7 @@ section.hero {
 
         &:not(.large) {
             .card {
-                padding: 40px 10px;
+                padding: 40px 10px 10px 10px;
             }
 
             .flex-wrapper {
@@ -240,6 +251,18 @@ section.hero {
                     }
                 }
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    section.hero .card .flex-wrapper {
+        .content {
+            margin-top: 430px;
+        }
+
+        .image {
+            height: 540px;
         }
     }
 }
