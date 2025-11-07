@@ -2,8 +2,10 @@ section.cta-deal {
     padding-bottom: 80px;
 
     .card {
-        margin: 0 10px;
         position: relative;
+        width: 2000px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
 
         .image {
             display: block;
@@ -95,14 +97,14 @@ section.cta-deal {
                 padding: 20px;
 
                 .deal .wrap {
-                flex-direction: column-reverse;
-                align-items: flex-start;
+                    flex-direction: column-reverse;
+                    align-items: flex-start;
                 }
 
                 .btn {
-                width: 100%;
-                display: flex;
-                margin: 10px 0 0 0;
+                    width: 100%;
+                    display: flex;
+                    margin: 10px 0 0 0;
                 }
             }
         }

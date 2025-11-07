@@ -4,10 +4,12 @@ footer.footer {
     }
 
     .card {
-        margin: 10px;
         background: $blue;
         color: $white;
         border-radius: $radius-mid;
+        width: 2000px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto 10px auto;
 
         h4 {
             font-size: 1.25rem;

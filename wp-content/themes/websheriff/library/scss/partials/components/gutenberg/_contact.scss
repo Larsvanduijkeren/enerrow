@@ -2,6 +2,9 @@ section.contact {
     .card {
         position: relative;
         z-index: 5;
+        width: 2000px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
         color: $white;
 
         a {

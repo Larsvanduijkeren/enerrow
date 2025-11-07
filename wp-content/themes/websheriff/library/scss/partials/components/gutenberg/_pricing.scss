@@ -13,6 +13,9 @@ section.pricing {
             border-radius: $radius-mid;
             background: $green;
             z-index: -1;
+            width: 2000px;
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
         }
 
         .content {

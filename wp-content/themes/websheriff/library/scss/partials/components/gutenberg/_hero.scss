@@ -94,6 +94,9 @@ section.hero {
     &:not(.large) {
         .card {
             padding: 10px;
+            width: 2000px;
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
         }
 
         .flex-wrapper {
@@ -144,6 +147,13 @@ section.hero {
     }
 
     &.large {
+        .card {
+            position: relative;
+            width: 2000px;
+            max-width: calc(100% - 20px);
+            margin: 0 auto;
+        }
+
         .container {
             padding-bottom: 120px !important;
         }
@@ -256,7 +266,7 @@ section.hero {
 }
 
 @media only screen and (min-width: 1800px) {
-    section.hero .card .flex-wrapper {
+    section.hero.large .card .flex-wrapper {
         .content {
             margin-top: 430px;
         }

@@ -1,4 +1,12 @@
 section.workout-slider {
+    .aos-animate .stat-circle .progress {
+        stroke-dashoffset: calc(var(--circ) * (1 - var(--value))) !important;
+        /* Progressive enhancement: ensures a transition even if .aos-animate is present on first paint */
+        @starting-style {
+            stroke-dashoffset: var(--circ) !important;
+        }
+    }
+
     .flex-wrapper {
         display: flex;
         align-items: flex-start;
@@ -31,26 +39,65 @@ section.workout-slider {
                 flex-wrap: wrap;
                 margin: -10px;
 
+                /* Core sizing + math */
+                .stat-circle {
+                    --r: 52; /* circle radius (SVG units) */
+                    --circ: calc(2 * 3.14159 * var(--r)); /* circumference */
+                    --value: 1; /* 0..1 (1 = 100%) fallback */
+                    width: 175px;
+                    aspect-ratio: 1;
+                    margin: 0 auto 20px auto;
+                }
+
+                /* SVG presentation */
+                .stat-circle svg {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+
+                .stat-circle .track {
+                    fill: none;
+                    stroke: $blue;
+                    stroke-width: 8;
+                }
+
+                .stat-circle .progress {
+                    fill: none;
+                    stroke: $green; /* change color as you like */
+                    stroke-width: 9;
+                    stroke-linecap: round;
+                    transform: rotate(-90deg); /* start at top (12 o’clock) */
+                    transform-origin: 60px 60px;
+                    stroke-dasharray: var(--circ);
+                    stroke-dashoffset: var(--circ); // start at 0%
+                    transition: stroke-dashoffset 2s ease-out;
+                    will-change: stroke-dashoffset;
+                }
+
+                /* Animate when the PARENT (e.g., .stat-circle-wrap) receives .aos-animate */
+
+                /* Optional text styling */
+                .stat-circle text {
+                    font-size: 30px;
+                    font-weight: 700;
+                    font-family: $font-pixel;
+                    fill: $blue;
+                }
+
+                /* Respect reduced motion */
+                @media (prefers-reduced-motion: reduce) {
+                    .stat-circle .progress {
+                        transition: none;
+                    }
+                }
+
                 > * {
                     width: calc(50% - 20px);
                     max-width: calc(50% - 20px);
                     flex-basis: calc(50% - 20px);
                     margin: 10px;
                     text-align: center;
-
-                    .stat-score {
-                        font-size: 50px;
-                        font-weight: 400;
-                        font-family: $font-pixel;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: 175px;
-                        height: 175px;
-                        border: 12px solid $blue;
-                        margin: 0 auto 20px auto;
-                        border-radius: 100%;
-                    }
 
                     h4 {
                         font-size: 1.1rem;
@@ -110,6 +157,7 @@ section.workout-slider {
         .flex-wrapper {
             display: block;
             margin: 0;
+
             .content {
                 padding: 20px;
             }

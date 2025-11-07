@@ -1,9 +1,11 @@
 section.cta-device {
     .card {
-        margin: 0 10px;
         background: $green;
         border-radius: $radius-mid;
         position: relative;
+        width: 2000px;
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
     }
 
     .content {

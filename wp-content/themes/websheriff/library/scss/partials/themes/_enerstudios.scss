@@ -393,8 +393,20 @@ $es_grey: #656565;
                 }
 
                 .info {
-                    .stats .stat-score {
-                        border-color: $es_green;
+                    .stats {
+                        .stat-circle {
+                            .track {
+                                stroke: $es_grey;
+                            }
+
+                            .progress {
+                                stroke: $es_green;
+                            }
+
+                            text {
+                                fill: $es_green;
+                            }
+                        }
                     }
 
                     .usps .usp {

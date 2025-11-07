@@ -38,7 +38,20 @@ $id = get_field('id');
                                         <?php foreach ($workout_stats as $stat) : ?>
                                             <div class="stat">
                                                 <?php if (empty($stat['stat']) === false) : ?>
-                                                    <span class="stat-score"><?php echo $stat['stat']; ?></span>
+                                                    <div class="stat-wrap">
+                                                        <div class="stat-circle" style="--value:1"> <!-- 1 = 100% (use 0..1 for other values) -->
+                                                            <svg viewBox="0 0 120 120" aria-label="Progress 100%">
+                                                                <!-- Track -->
+                                                                <circle class="track" cx="60" cy="60" r="52" />
+                                                                <!-- Animated progress -->
+                                                                <circle class="progress" cx="60" cy="60" r="52" />
+                                                                <!-- Optional center label -->
+                                                                <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+                                                                    <?php echo $stat['stat']; ?>
+                                                                </text>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
                                                 <?php endif; ?>
 
                                                 <?php if (empty($stat['title']) === false) : ?>

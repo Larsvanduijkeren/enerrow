@@ -18,11 +18,13 @@ jQuery.noConflict();
             AOS.init({
                 offset: 50,
                 duration: 1000,
+                delay: 10000,
             });
         } else {
             AOS.init({
                 offset: 50,
                 duration: 600,
+                delay: 10000,
             });
         }
     });
