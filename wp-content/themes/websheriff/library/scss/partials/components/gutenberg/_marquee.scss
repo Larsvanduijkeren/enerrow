@@ -1,9 +1,25 @@
+.rtl section.marquee {
+    height: 120px;
+
+    @media only screen and (max-width: 991px) {
+        height: 80px;
+    }
+
+    .marquee-slider {
+        height: 150px;
+        display: none;
+    }
+}
+
 section.marquee {
     overflow: hidden;
 
     .container {
         padding-top: 40px !important;
         padding-bottom: 40px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        max-width: 100%;
     }
 
     &.green .text {
@@ -29,6 +45,10 @@ section.marquee {
 }
 
 @media only screen and (max-width: 991px) {
+    .rtl section.marquee .marquee-slider {
+        height: 100px;
+    }
+
     section.marquee {
         .text {
             font-size: 90px;
