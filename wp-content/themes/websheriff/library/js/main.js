@@ -56,30 +56,95 @@ jQuery.noConflict();
     let workoutSlider = () => {
         let slider = $(".workout-slider .slider");
 
-        if (slider && slider.length > 0) {
-            slider.slick({
-                autoplay: false,
-                fade: true,
-                dots: true,
-                arrows: false,
-                slidesToShow: 1,
-            });
+        // Helper function to init the slider safely
+        let initSlider = (rtl = false) => {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    autoplay: false,
+                    fade: true,
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 1,
+                    rtl: rtl,
+                });
+            } else {
+                slider.slick('setOption', 'rtl', rtl, true);
+                slider.slick('refresh');
+            }
+        };
+
+        // Check if body already has RTL
+        if ($('body').hasClass('rtl')) {
+            initSlider(true);
+        } else {
+            initSlider(false);
         }
-    }
+
+        // Watch for Weglot toggling RTL dynamically
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    const isRTL = $('body').hasClass('rtl');
+                    const currentRTL = slider.slick('slickGetOption', 'rtl');
+                    if (isRTL !== currentRTL) {
+                        slider.slick('unslick');
+                        initSlider(isRTL);
+                    }
+                }
+            });
+        });
+
+        observer.observe(document.body, { attributes: true });
+    };
+
 
     let reviewSlider = () => {
         let slider = $(".review-slider .slider");
 
-        if (slider && slider.length > 0) {
-            slider.slick({
-                autoplay: true,
-                dots: true,
-                arrows: false,
-                variableWidth: true,
-                autoplaySpeed: 4000,
+        // Helper to initialize or refresh the slider
+        let initSlider = (rtl = false) => {
+            if (!slider.hasClass('slick-initialized')) {
+                slider.slick({
+                    autoplay: true,
+                    dots: true,
+                    arrows: false,
+                    variableWidth: true,
+                    autoplaySpeed: 4000,
+                    rtl: rtl,
+                });
+            } else {
+                slider.slick('unslick');
+                slider.slick({
+                    autoplay: true,
+                    dots: true,
+                    arrows: false,
+                    variableWidth: true,
+                    autoplaySpeed: 4000,
+                    rtl: rtl,
+                });
+            }
+        };
+
+        // Initial check
+        initSlider($('body').hasClass('rtl'));
+
+        // Watch for Weglot toggling RTL dynamically
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.attributeName === 'class') {
+                    const isRTL = $('body').hasClass('rtl');
+                    const currentRTL = slider.slick('slickGetOption', 'rtl');
+                    if (isRTL !== currentRTL) {
+                        slider.slick('unslick');
+                        initSlider(isRTL);
+                    }
+                }
             });
-        }
-    }
+        });
+
+        observer.observe(document.body, { attributes: true });
+    };
+
 
     let marquee = () => {
         $('.marquee-slider').marquee({

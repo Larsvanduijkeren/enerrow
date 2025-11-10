@@ -1,3 +1,23 @@
+.rtl section.review-slider {
+    .grid:before {
+        left: 0;
+        right: 33.333%;
+        transform: translateX(100%);
+    }
+
+    .grid .reviews .slider {
+        .slick-list {
+            margin-right: 30px !important;
+            padding-right: 30px !important;
+        }
+
+        .review {
+            margin-right: 0 !important;
+            margin-left: 20px !important;
+        }
+    }
+}
+
 section.review-slider {
     .grid {
         display: grid;
@@ -196,7 +216,7 @@ section.review-slider {
             grid-column: span 12;
 
             .slider .review p {
-            font-size: 1.25rem;
+                font-size: 1.25rem;
             }
         }
     }
