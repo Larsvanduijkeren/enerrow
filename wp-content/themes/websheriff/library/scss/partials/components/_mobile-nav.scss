@@ -3,6 +3,11 @@
     pointer-events: all;
 }
 
+.rtl .mobile-nav .content .nav ul li a:after {
+    transform: rotate(-135deg);
+    margin-left: 10px;
+}
+
 .mobile-nav {
     position: fixed;
     left: 0;

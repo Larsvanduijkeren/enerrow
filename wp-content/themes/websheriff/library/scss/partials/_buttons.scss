@@ -1,3 +1,14 @@
+.rtl {
+    .btn,
+    button[type=submit]:not(.dgwt-wcas-search-submit),
+    input[type=submit] {
+        &:before {
+            margin-right: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
 .btn,
 button[type=submit]:not(.dgwt-wcas-search-submit),
 input[type=submit] {

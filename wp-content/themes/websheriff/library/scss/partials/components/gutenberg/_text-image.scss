@@ -1,3 +1,17 @@
+.rtl section.text-image {
+    &.media-first .flex-wrapper {
+        .image {
+            margin-right: 0;
+            margin-left: -80px;
+        }
+    }
+
+    .flex-wrapper .image {
+        margin-left: 0;
+        margin-right: -80px;
+    }
+}
+
 section.text-image {
     &.blue .content {
         background: $blue;
@@ -100,10 +114,10 @@ section.text-image {
 
 @media only screen and (max-width: 991px) {
     section.text-image {
-&.media-first .flex-wrapper > .image {
-            border-radius: 20px 0 0 20px;
-            margin-left: 20px;
-}
+        &.media-first .flex-wrapper > .image {
+            border-radius: 20px 0 0 20px !important;
+            margin-left: 20px !important;
+        }
 
         .flex-wrapper {
             display: block;
@@ -122,8 +136,8 @@ section.text-image {
             }
 
             > .image {
-            margin: -40px 0 0 -20px;
-            border-radius: 0 20px 20px 0;
+                margin: -40px 0 0 -20px !important;
+                border-radius: 0 20px 20px 0 !important;
             }
         }
     }

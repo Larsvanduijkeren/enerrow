@@ -1,3 +1,16 @@
+.rtl section.concepts .concepts-list .concept {
+    .circle-btn,
+    .coming-soon {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    img {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+}
+
 section.concepts {
     h2 {
         font-size: 1.25rem;
@@ -100,7 +113,7 @@ section.concepts {
 
         .circle-btn,
         .coming-soon {
-            margin: 0 auto;
+            margin: 0 auto !important;
         }
     }
 }
