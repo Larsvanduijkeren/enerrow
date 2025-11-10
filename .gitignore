@@ -15,8 +15,12 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+vendor
 node_modules
 !wp-includes/**/vendor
+!wp-content/themes/**/vendor
 !wp-admin/**/vendor
 !wp-content/plugins/**/vendor
+!/wp-content/plugins/**/node_modules
 .env
+robots.txt
