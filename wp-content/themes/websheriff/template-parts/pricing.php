@@ -60,11 +60,11 @@ $id = get_field('id');
 
                                         <?php if (empty($plan['monthly_price']) === false) : ?>
                                             <span
-                                                class="monthly-price active"><span>&euro;</span><?php echo $plan['monthly_price']; ?></span>
+                                                class="monthly-price active"><span>SAR</span><?php echo $plan['monthly_price']; ?></span>
                                         <?php endif; ?>
 
                                         <?php if (empty($plan['yearly_price']) === false) : ?>
-                                            <span class="yearly-price"><span>&euro;</span><?php echo $plan['yearly_price']; ?></span>
+                                            <span class="yearly-price"><span>SAR</span><?php echo $plan['yearly_price']; ?></span>
                                         <?php endif; ?>
 
                                         <?php if(empty($plan['button']) === false) {

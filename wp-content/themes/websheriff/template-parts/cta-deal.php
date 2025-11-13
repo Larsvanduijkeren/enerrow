@@ -45,11 +45,11 @@ $id = get_field('id');
 
                         <div class="price">
                             <?php if (empty($deal_new_price) === false) : ?>
-                                <span class="new">&euro;<?php echo $deal_new_price; ?></span>
+                                <span class="new">SAR <?php echo $deal_new_price; ?></span>
                             <?php endif; ?>
 
                             <?php if (empty($deal_old_price) === false) : ?>
-                                <span class="old">&euro;<?php echo $deal_old_price; ?></span>
+                                <span class="old">SAR <?php echo $deal_old_price; ?></span>
                             <?php endif; ?>
                         </div>
                     </div>

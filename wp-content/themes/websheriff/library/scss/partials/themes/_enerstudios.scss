@@ -37,8 +37,59 @@ $es_grey: #656565;
         }
     }
 
-    header {
+    .hamburger {
         display: none !important;
+    }
+
+    .lang-popup .content {
+        background: $es_green !important;
+        color: $es_black !important;
+
+        h4 {
+            color: $es_black !important;
+        }
+    }
+
+    header.header {
+        background: transparent;
+
+        .container {
+            max-width: 2040px;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+        }
+
+        .flex-wrapper {
+            .logo {
+                display: none;
+            }
+
+            .logo + div {
+                display: none;
+            }
+
+            .lang-trigger {
+                margin-top: 20px;
+                background: $es_green;
+
+                &:before {
+                    color: $es_black;
+                }
+
+                &:hover,
+                &:focus {
+                    background: $es_black !important;
+
+                    &:before {
+                        color: $es_green !important;
+                    }
+                }
+            }
+
+            .right .header-buttons {
+                display: none;
+            }
+        }
     }
 
     footer.footer {
@@ -126,12 +177,13 @@ $es_grey: #656565;
 
         &.hero {
             &.large {
+                padding-top: 10px;
                 + section .container {
                     padding-top: 0 !important;
                 }
 
                 .card {
-                    margin: 0 !important;
+                    margin: 0 auto !important;
                     background: transparent;
                     color: $es_green;
 
@@ -549,6 +601,14 @@ $es_grey: #656565;
 
 @media only screen and (max-width: 991px) {
     .enerstudios {
+        header.header {
+            height: 70px;
+            .flex-wrapper .right {
+                padding-top: 10px;
+                padding-right: 0;
+            }
+        }
+
         .container {
             padding-left: 20px !important;
             padding-right: 20px !important;
