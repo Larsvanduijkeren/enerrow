@@ -28,12 +28,19 @@ function rocket_init() {
 		return;
 	}
 
+	/**
+	 * Fires when WP Rocket starts to load.
+	 */
+	do_action( 'wp_rocket_before_load' );
+
 	// Call defines and functions.
 	require WP_ROCKET_FUNCTIONS_PATH . 'options.php';
 
 	// Last constants.
 	define( 'WP_ROCKET_PLUGIN_NAME', 'WP Rocket' );
 	define( 'WP_ROCKET_PLUGIN_SLUG', sanitize_key( WP_ROCKET_PLUGIN_NAME ) );
+
+	require WP_ROCKET_INC_PATH . '/API/bypass.php';
 
 	$wp_rocket = new Plugin(
 		WP_ROCKET_PATH . 'views',
@@ -45,7 +52,6 @@ function rocket_init() {
 	require_once WP_ROCKET_FUNCTIONS_PATH . 'api.php';
 	require WP_ROCKET_FUNCTIONS_PATH . 'posts.php';
 	require WP_ROCKET_FUNCTIONS_PATH . 'admin.php';
-	require WP_ROCKET_INC_PATH . '/API/bypass.php';
 	require WP_ROCKET_FUNCTIONS_PATH . 'formatting.php';
 	require WP_ROCKET_FUNCTIONS_PATH . 'i18n.php';
 	require WP_ROCKET_FUNCTIONS_PATH . 'htaccess.php';
