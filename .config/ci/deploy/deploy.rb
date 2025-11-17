@@ -11,7 +11,7 @@ set :branch, "master"
 set :deploy_user, "deploy"
 
 # target deployment
-set :deploy_to, "/var/www/html/enerrow"
+set :deploy_to, "/var/www/html/enerstudios"
 
 set :theme_folder, "wp-content/themes/websheriff"
 set :root_folder, "../.."
