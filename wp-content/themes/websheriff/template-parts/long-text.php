@@ -1,10 +1,11 @@
 <?php
+$size = get_field('size');
 $title = get_field('title');
 $text = get_field('text');
 ?>
 
 <section
-    class="long-text"
+    class="long-text <?php echo $size; ?>"
     id="<?php if (empty($id) === false) {
         echo $id;
     } ?>"

@@ -1,4 +1,9 @@
 section.long-text {
+    &.full-width .content {
+        max-width: 100%;
+        width: 100%;
+    }
+
     .content {
         max-width: 800px;
         margin: 0 auto;
