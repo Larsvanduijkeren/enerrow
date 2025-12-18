@@ -22,8 +22,8 @@
         },
         {
             "key": "field_69086b9441cb7",
-            "label": "Workouts",
-            "name": "workouts",
+            "label": "Workout",
+            "name": "workout",
             "aria-label": "",
             "type": "post_object",
             "instructions": "",
@@ -42,7 +42,7 @@
             ],
             "taxonomy": "",
             "return_format": "id",
-            "multiple": 1,
+            "multiple": 0,
             "allow_null": 0,
             "allow_in_bindings": 0,
             "bidirectional": 0,
@@ -69,5 +69,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1762159519
+    "modified": 1766044012
 }

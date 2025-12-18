@@ -30,7 +30,7 @@ add_action('acf/init', function () {
             'review-slider'  => 'Review Slider',
             'team-archive'   => 'Team Archive',
             'text-image'     => 'Text Image',
-            'workout-slider' => 'Workout Slider',
+            'workout-slider' => 'Workout',
         ];
 
 

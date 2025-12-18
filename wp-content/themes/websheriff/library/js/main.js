@@ -54,18 +54,26 @@ jQuery.noConflict();
     }
 
     let workoutSlider = () => {
-        let slider = $(".workout-slider .slider");
+        let slider = $(".workout-slider .usps");
 
         // Helper function to init the slider safely
         let initSlider = (rtl = false) => {
             if (!slider.hasClass('slick-initialized')) {
                 slider.slick({
                     autoplay: false,
-                    fade: true,
+                    infinite: true,
                     dots: true,
                     arrows: false,
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     rtl: rtl,
+                    responsive: [
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1,
+                            }
+                        }
+                    ]
                 });
             } else {
                 slider.slick('setOption', 'rtl', rtl, true);
