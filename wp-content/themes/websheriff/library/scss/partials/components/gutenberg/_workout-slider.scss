@@ -114,6 +114,12 @@ section.workout-slider {
             .usps {
                 margin-top: 20px !important;
 
+                .slick-track {
+                    display: flex;
+                    align-items: stretch;
+                    justify-content: flex-start;
+                }
+
                 .slick-list {
                     margin: 0 -10px;
                 }
@@ -125,6 +131,7 @@ section.workout-slider {
                     border: 1px solid rgba(0, 0, 0, 0.1);
                     margin: 0 10px;
                     display: block;
+                    height: auto;
 
                     img,
                     svg {

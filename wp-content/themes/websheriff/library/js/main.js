@@ -61,7 +61,7 @@ jQuery.noConflict();
             if (!slider.hasClass('slick-initialized')) {
                 slider.slick({
                     autoplay: false,
-                    infinite: true,
+                    infinite: false,
                     dots: true,
                     arrows: false,
                     slidesToShow: 2,
